@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation — Pinwheel Studios Unity Tools</title>
+  <meta name="description" content="Official Unity documentation for Pinwheel Compose, Pinwheel Motion, Pinwheel Thread (v1.1), Unity MeshLOD Studio, and Unity URP World Rescaler by Pinwheel Studios." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <img src="assets/pinwheel-mark.png" alt="" aria-hidden="true" class="bg-pinwheel" />
+
+  <div class="page-wrap">
+    <!-- TOP NAVIGATION -->
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="index.html" class="brand" aria-label="Pinwheel Studios Home">
+          <img src="assets/pinwheel-mark.png" alt="Pinwheel Studios Logo" class="brand-mark" />
+          <span class="brand-title">PINWHEEL STUDIOS</span>
+        </a>
+
+        <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle Menu">Menu</button>
+
+        <nav class="nav-links" aria-label="Primary Navigation">
+          <a href="index.html">← Home</a>
+          <a href="index.html#tools">Asset Store</a>
+          <a href="index.html#games">Games</a>
+          <a href="index.html#support">Support</a>
+          <a href="docs.html" class="nav-docs active">Documentation</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container docs-layout">
+      <!-- STICKY SIDEBAR GROUPED BY ASSET -->
+      <aside class="docs-sidebar" aria-label="Documentation Navigation">
+        <input id="docsSearch" class="docs-search" type="search" placeholder="Search all docs..." aria-label="Search documentation" />
+
+        <!-- ASSET 1: PINWHEEL COMPOSE & THREAD -->
+        <div class="toc-asset-block">
+          <div class="toc-asset-title">Asset: Pinwheel Compose &amp; Thread</div>
+          <div class="toc-group-label">Doc 1 · Beginner's Tutorial (v1.1)</div>
+          <ul class="toc-list">
+            <li><a href="#ch1"><span>1. Overview</span><span class="toc-pill">All</span></a></li>
+            <li><a href="#ch2"><span>2. Setup &amp; Compat</span><span class="toc-pill">All</span></a></li>
+            <li><a href="#ch3"><span>3. Building Menus</span><span class="toc-pill">Compose</span></a></li>
+            <li><a href="#ch4"><span>4. Themes &amp; Custom UI</span><span class="toc-pill">Compose</span></a></li>
+            <li><a href="#ch5"><span>5. Animations</span><span class="toc-pill">Motion</span></a></li>
+            <li><a href="#ch6"><span>6. Node Wiring</span><span class="toc-pill">Thread</span></a></li>
+            <li><a href="#ch7"><span>7. Nodes &amp; Reliability</span><span class="toc-pill">Thread</span></a></li>
+            <li><a href="#ch8"><span>8. Sharing Files</span><span class="toc-pill">Both</span></a></li>
+            <li><a href="#ch9"><span>9. PurrNet &amp; Hooks</span><span class="toc-pill">Thread</span></a></li>
+            <li><a href="#ch10"><span>10. Troubleshooting</span><span class="toc-pill">All</span></a></li>
+          </ul>
+
+          <div class="toc-group-label">Doc 2 · UI Production Workflow</div>
+          <ul class="toc-list">
+            <li><a href="#wf-pipeline"><span>5-Stage Pipeline</span><span class="toc-pill">All</span></a></li>
+            <li><a href="#wf-team"><span>Team Workflow</span><span class="toc-pill">Both</span></a></li>
+            <li><a href="#wf-checklist"><span>Release Checklist</span><span class="toc-pill">All</span></a></li>
+          </ul>
+        </div>
+
+        <!-- ASSET 2: UNITY MESHLOD STUDIO -->
+        <div class="toc-asset-block">
+          <div class="toc-asset-title">Asset: Unity MeshLOD Studio</div>
+          <div class="toc-group-label">Open-Source Guide</div>
+          <ul class="toc-list">
+            <li><a href="#meshlod-docs"><span>Features, Install &amp; Usage</span><span class="toc-pill">MIT</span></a></li>
+          </ul>
+        </div>
+
+        <!-- ASSET 3: UNITY URP WORLD RESCALER -->
+        <div class="toc-asset-block">
+          <div class="toc-asset-title">Asset: Unity URP World Rescaler</div>
+          <div class="toc-group-label">Open-Source Guide</div>
+          <ul class="toc-list">
+            <li><a href="#rescaler-docs"><span>Features, Install &amp; Usage</span><span class="toc-pill">URP</span></a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- DOCUMENTATION BODY -->
+      <div class="docs-content">
+        <div class="docs-hero">
+          <div class="section-label">Pinwheel Studios Documentation</div>
+          <h1>Unity Asset Documentation</h1>
+          <p style="color:var(--ink-mid);max-width:72ch;">
+            Select an asset below to jump directly to its manuals, or filter the page by package. Every guide and chapter clearly indicates which Pinwheel Studios asset it applies to.
+          </p>
+
+          <!-- EXPLICIT ASSET DIRECTORY -->
+          <div class="asset-directory">
+            <a href="#suite-tutorial" class="asset-dir-card">
+              <span class="tag tag-gold" style="align-self:flex-start;">Asset Store · v1.1</span>
+              <h3>Pinwheel Compose &amp; Thread</h3>
+              <p>Includes <strong>Doc 1: Beginner's Tutorial</strong> (Compose, Motion, Thread) and <strong>Doc 2: 5-Stage UI Production Workflow</strong>.</p>
+            </a>
+            <a href="#meshlod-docs" class="asset-dir-card">
+              <span class="tag tag-blue" style="align-self:flex-start;">Open Source · MIT</span>
+              <h3>Unity MeshLOD Studio</h3>
+              <p>Prefab-first LOD conversion and LODGroup setup guide for Unity 6.3+.</p>
+            </a>
+            <a href="#rescaler-docs" class="asset-dir-card">
+              <span class="tag tag-blue" style="align-self:flex-start;">Open Source · URP</span>
+              <h3>Unity URP World Rescaler</h3>
+              <p>Scene, Terrain, collider, and URP lighting rescaling installation and usage notes.</p>
+            </a>
+          </div>
+
+          <!-- INTERACTIVE ASSET FILTER -->
+          <div class="asset-filter-bar" role="group" aria-label="Filter Documentation by Asset">
+            <button type="button" class="filter-btn active" data-filter="all">Show All Assets</button>
+            <button type="button" class="filter-btn" data-filter="suite">Pinwheel Compose &amp; Thread</button>
+            <button type="button" class="filter-btn" data-filter="meshlod">Unity MeshLOD Studio</button>
+            <button type="button" class="filter-btn" data-filter="rescaler">Unity URP World Rescaler</button>
+          </div>
+        </div>
+
+        <!-- ================================================================
+             DOCUMENT 1 BANNER: PINWHEEL COMPOSE & THREAD BEGINNER'S TUTORIAL
+             ================================================================ -->
+        <div id="suite-tutorial" class="doc-group-banner" data-asset="suite">
+          <div class="doc-group-meta">
+            <span class="tag tag-gold">Asset: Pinwheel Compose &amp; Pinwheel Thread (v1.1)</span>
+            <span class="tag">Document 1 of 2 · Beginner's Tutorial</span>
+            <span class="tag">Unity 6.0 / 6.3+</span>
+          </div>
+          <h2>Pinwheel Compose &amp; Pinwheel Thread — Complete Beginner's Tutorial</h2>
+          <p>Covers Pinwheel Compose (Package 1), Pinwheel Motion (included in Compose), and Pinwheel Thread (Package 2). Assumes zero prior Unity UI experience.</p>
+        </div>
+
+        <!-- CHAPTER 1 -->
+        <section id="ch1" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-gold">Applies to: Pinwheel Compose, Motion &amp; Thread</span>
+            <span class="tag">Chapter 1</span>
+          </div>
+          <h2>What Pinwheel Compose, Motion &amp; Thread Do</h2>
+          <p>
+            Think of building game menus like building a room: one tool builds the walls, one brings them to life, and one wires the light switches. The Pinwheel Studios UI Suite packages three pillars into two independent Unity packages:
+          </p>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead>
+                <tr><th>Asset / Module</th><th>Role</th><th>What It Does</th><th>Unity Menu Location</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pinwheel Compose<br /><span class="mono" style="font-size:0.72rem;color:var(--ink-dim);">Package 1</span></td>
+                  <td>Screen Builder &amp; Themer</td>
+                  <td>Builds Main Menus, Settings, Language popups, and Lobby screens in one click. Edit text, icons, colors, and fonts live, and export <span class="inline-code">.pwui</span> files for teammates.</td>
+                  <td class="mono">Tools → Pinwheel Studios → Pinwheel Compose</td>
+                </tr>
+                <tr>
+                  <td>Pinwheel Motion<br /><span class="mono" style="font-size:0.72rem;color:var(--ink-dim);">Included in Compose</span></td>
+                  <td>UI Animation Components</td>
+                  <td>Two Inspector components (Button Feel &amp; Panel Intro) adding hover/click feedback and OnEnable title/card reveals with zero Animator controllers and zero code.</td>
+                  <td class="mono">Add Component → Pinwheel Studios → Pinwheel Motion</td>
+                </tr>
+                <tr>
+                  <td>Pinwheel Thread<br /><span class="mono" style="font-size:0.72rem;color:var(--ink-dim);">Package 2</span></td>
+                  <td>Visual Flow Router</td>
+                  <td>A rename-proof visual node grid where you drag Buttons and Menus from your Hierarchy, draw wires, check the live Health Badge, and auto-generate one clean C# router script.</td>
+                  <td class="mono">Tools → Pinwheel Studios → Pinwheel Thread</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <strong>Standalone Assembly Definitions (.asmdef)</strong>
+            Pinwheel Compose and Pinwheel Thread ship with separate <span class="inline-code">.asmdef</span> files. You can install Compose alone, Thread alone, or both together with zero compile errors. All Pinwheel Motion animations are zero-GC procedural C#, and Thread compiles to one C# router script without Inspector OnClick lists.
+          </div>
+        </section>
+
+        <!-- CHAPTER 2 -->
+        <section id="ch2" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-gold">Applies to: Pinwheel Compose &amp; Pinwheel Thread</span>
+            <span class="tag">Chapter 2</span>
+          </div>
+          <h2>Compatibility, Installation &amp; 4-Step Setup</h2>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead>
+                <tr><th>Requirement</th><th>Supported Versions / Details</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Unity Version</td><td>Unity 6.0 LTS &amp; Unity 6.3+ (tested with <span class="inline-code">FindFirstObjectByType</span> and <span class="inline-code">TextWrappingModes</span>).</td></tr>
+                <tr><td>Render Pipelines</td><td>Built-in Render Pipeline, URP, and HDRP (pipeline-agnostic Legacy <span class="inline-code">UnityEngine.UI</span> + TextMeshPro).</td></tr>
+                <tr><td>Input Handling</td><td>Unity Input System (zero-Update callback) and Legacy Input Manager (automatic <span class="inline-code">#else</span> fallback for Escape Key).</td></tr>
+                <tr><td>Resolutions &amp; Aspects</td><td>16:9 (1920×1080), 21:9 Ultrawide, 16:10 (Steam Deck), and 4:3 via Scale With Screen Size CanvasScaler.</td></tr>
+                <tr><td>Pause Menu Safety</td><td>All Pinwheel Motion animations use <span class="inline-code">Time.unscaledDeltaTime</span> so UI stays smooth at <span class="inline-code">Time.timeScale = 0</span>.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>4-Step First-Time Setup</h3>
+          <ol>
+            <li><strong>Import Package(s):</strong> Double-click <span class="inline-code">Pinwheel_Compose_v1.1.unitypackage</span> and/or <span class="inline-code">Pinwheel_Thread_v1.1.unitypackage</span> (or use <span class="inline-code">Assets → Import Package → Custom Package</span>).</li>
+            <li><strong>Import TextMeshPro Essentials:</strong> In a new project, run <span class="inline-code">Window → TextMeshPro → Import TMP Essential Resources</span>. Without this, text labels may appear blank.</li>
+            <li><strong>Verify Top Menu Bar:</strong> Wait 2 seconds for <span class="inline-code">.asmdef</span> compilation and confirm <span class="inline-code">Tools → Pinwheel Studios</span> lists Pinwheel Compose and Pinwheel Thread.</li>
+            <li><strong>Set Game View to 16:9:</strong> Select 16:9 (or 1920×1080) in Game View. Compose creates a Canvas and EventSystem automatically when you spawn your first screen.</li>
+          </ol>
+        </section>
+
+        <!-- CHAPTER 3 -->
+        <section id="ch3" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-gold">Applies to: Pinwheel Compose (Package 1)</span>
+            <span class="tag">Chapter 3</span>
+          </div>
+          <h2>Building Main Menu, Settings, Language &amp; Lobby Screens</h2>
+          <ol>
+            <li>Open <span class="inline-code">Tools → Pinwheel Studios → Pinwheel Compose</span> and dock it next to Game View.</li>
+            <li>Under <strong>CREATE STANDALONE SCREEN</strong>, click <strong>Main Menu</strong> to generate a 1920×1080 Canvas with PLAY, HOST LOBBY, JOIN LOBBY, SETTINGS, QUIT, and a watermark.</li>
+            <li>Click <strong>Settings</strong> for a 4-category Settings screen (VIDEO, AUDIO, CONTROLS, ACCESSIBILITY) with a single ScrollView and BACK | APPLY | RESET footer.</li>
+            <li>Use <strong>Solo</strong> (green button in SCENE SCREENS) to isolate one screen in Game View so menus never overlap while editing.</li>
+            <li>Click <strong>Icon Submenu</strong> to spawn a centered Language popup (English, Español, Français, 日本語) with flag icon slots and an active gold indicator dot.</li>
+          </ol>
+          <h3>Live Editing (With Full Ctrl+Z Undo)</h3>
+          <ul>
+            <li><strong>Main Menu:</strong> Switch between Left-Anchored and Centered Card, assign a Game Logo Sprite, restyle buttons (Primary / Secondary / Danger), or reorder with ▲/▼.</li>
+            <li><strong>Settings Menu:</strong> Edit Top Category Tabs, add <span class="inline-code">&lt; Stepper &gt;</span>, Slider, Toggle, Keybind, or Submenu ▸ rows, and toggle 24×24 Left Icons.</li>
+            <li><strong>Icon Submenus:</strong> Toggle live between 1-Column Icon List and 2-Column Icon Grid.</li>
+            <li><strong>Create Lobby &amp; Lobby Room:</strong> Multiplayer screens with Room Code bars, TMP_InputFields, Max Players steppers, Player Roster rows, and a toggleable Side Loadout Panel.</li>
+          </ul>
+        </section>
+
+        <!-- CHAPTER 4 -->
+        <section id="ch4" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-gold">Applies to: Pinwheel Compose (Package 1)</span>
+            <span class="tag">Chapter 4</span>
+          </div>
+          <h2>Themes, Fonts &amp; Bringing Your Own Custom UI</h2>
+          <p>
+            Click <strong>Edit Theme</strong> in Compose's top bar to open your saved <span class="inline-code">PWUI_Theme</span> ScriptableObject. Choose a preset (<strong>Dark Fantasy</strong>, <strong>Blood &amp; Iron</strong>, <strong>Modern Slate</strong>, or <strong>Horror Minimal</strong>), assign your TextMeshPro Primary/Header fonts and 9-slice sprites, and click <strong>APPLY THEME TO ALL SCENE SCREENS</strong>.
+          </p>
+          <h3>3 Ways to Mix Custom Art &amp; Panels</h3>
+          <ul>
+            <li><strong>1. Drop Into a Custom Slot:</strong> Create Lobby, Lobby Room, and Custom Panel include Custom Slots (+ Add Slot). Drop in any UI prefab and click Insert Prefab.</li>
+            <li><strong>2. Register Any Hand-Built Panel:</strong> Select your custom panel in the Hierarchy and click <strong>+ Register Selected UI Panel</strong>. It receives Solo Preview with <span class="inline-code">Lock Theme Sync = ON</span> by default.</li>
+            <li><strong>3. Theme Prefab Overrides:</strong> In <span class="inline-code">PWUI_Theme</span> Section 5, assign custom Button or Player Row prefabs so newly generated menus spawn your own prefabs automatically.</li>
+          </ul>
+        </section>
+
+        <!-- CHAPTER 5 -->
+        <section id="ch5" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-purple">Applies to: Pinwheel Motion (Included in Compose)</span>
+            <span class="tag">Chapter 5</span>
+          </div>
+          <h2>Adding Smooth Button &amp; OnEnable Animations</h2>
+          <p>
+            Add <span class="inline-code">PWUI_ButtonFeel</span> or <span class="inline-code">PWUI_PanelIntro</span> to any Unity UI object (built with Compose or by hand). Both run on unscaled time and reset cleanly on <span class="inline-code">OnDisable()</span>.
+          </p>
+          <h3>Part A: Button Feel Presets (<span class="inline-code">PWUI_ButtonFeel</span>)</h3>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead><tr><th>Preset</th><th>Behavior</th><th>Best Used For</th></tr></thead>
+              <tbody>
+                <tr><td>Crisp Pop</td><td>1.04× scale-up on hover with a 0.95× click squish.</td><td>General UI buttons.</td></tr>
+                <tr><td>Heavy Forge</td><td>Firm hover lock-in with a weighty downward dip on click.</td><td>Dark fantasy, medieval, and tactile UI.</td></tr>
+                <tr><td>Slide Nudge</td><td>Glides right (+9px) on hover; firms back on click.</td><td>Left-anchored Main Menu button stacks.</td></tr>
+                <tr><td>Spring Bounce</td><td>Underdamped spring overshoot on hover and release.</td><td>Party games, arcade UI, and reward buttons.</td></tr>
+                <tr><td>Subtle Tilt</td><td>Micro-rotation (+1.8°) and lift on hover; straightens on click.</td><td>Stylized or handcrafted cards and buttons.</td></tr>
+                <tr><td>Dread Flicker</td><td>Brief unsettling alpha micro-flicker on hover; stark click snap.</td><td>Psychological horror and minimal UI.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Part B: OnEnable Panel Intro Presets (<span class="inline-code">PWUI_PanelIntro</span>)</h3>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead><tr><th>Preset</th><th>Effect on Enable</th><th>Best Used For</th></tr></thead>
+              <tbody>
+                <tr><td>Slide Up + Fade</td><td>Rises softly from below while fading in.</td><td>Settings cards, Lobby rooms, standard panels.</td></tr>
+                <tr><td>Fade In</td><td>Clean CanvasGroup alpha dissolve (0 → 1).</td><td>Dark backdrops, overlays, minimal UI.</td></tr>
+                <tr><td>Slide From Left</td><td>Glides in from the left edge + fade.</td><td>Left-anchored Main Menus and sidebars.</td></tr>
+                <tr><td>Slide From Right</td><td>Glides in from the right edge + fade.</td><td>Right-hand Loadout/Class panels &amp; alerts.</td></tr>
+                <tr><td>Scale Pop</td><td>0.90× → 1.0× pop with gentle ease-out overshoot.</td><td>Language popups and confirmation dialogs.</td></tr>
+                <tr><td>Heavy Slam</td><td>Drops firmly from 1.13× down to 1.0× + fade.</td><td>Bold dark-fantasy banners and match headers.</td></tr>
+                <tr><td>Title Drop</td><td>Settles downward from above + fade.</td><td>Game logos and top card headers.</td></tr>
+                <tr><td>Cinematic Tracking</td><td>Tightens TMP letter-spacing while fading in.</td><td>Large TextMeshPro game titles.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <strong>1-Click Cascading Buttons (Auto-Stagger Children)</strong>
+            Select your <span class="inline-code">Menu_Buttons</span> container → Add Panel Intro → check <strong>Auto-Stagger Children</strong> → click <strong>Apply to All Direct Children</strong>. Click the green <strong>▶ REPLAY INTRO NOW</strong> button in Play Mode to preview timing live.
+          </div>
+        </section>
+
+        <!-- CHAPTER 6 -->
+        <section id="ch6" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-green">Applies to: Pinwheel Thread (Package 2)</span>
+            <span class="tag">Chapter 6</span>
+          </div>
+          <h2>Wiring Buttons to Menus on the Node Grid</h2>
+          <p>
+            Pinwheel Thread flows strictly Left-to-Right: <span class="node-pill pill-purple">Purple: Start Setup</span> → <span class="node-pill pill-blue">Blue: Triggers</span> → <span class="node-pill pill-gold">Gold: Actions</span> → <span class="node-pill pill-green">Green: Targets</span>.
+          </p>
+          <ol>
+            <li>Open <span class="inline-code">Tools → Pinwheel Studios → Pinwheel Thread</span>.</li>
+            <li>Drag <span class="inline-code">MainMenu_Screen</span> from Hierarchy onto the grid as a <strong>Screen Buttons Card (Blue)</strong>.</li>
+            <li>Drag <span class="inline-code">MainMenu_Screen</span> and <span class="inline-code">SettingsMenu_Screen</span> onto the grid as <strong>Menu Targets (Green)</strong>.</li>
+            <li>Add <strong>Lifecycle → Start Disabled (Purple)</strong> and wire <span class="inline-code">Disable On Start → Start Off</span> on SettingsMenu_Screen.</li>
+            <li>Add <strong>Actions → Switch Menu (Gold)</strong>: wire <span class="inline-code">MainMenu_Screen [SETTINGS] → In</span>, <span class="inline-code">Open → SettingsMenu_Screen</span>, and <span class="inline-code">Close → MainMenu_Screen</span>.</li>
+            <li>Wire both <span class="inline-code">Btn_Back</span> and a scoped <strong>Escape / Back Key (Blue)</strong> into the same <strong>Back (Auto-History) (Gold)</strong> node (Multi-Input creates <span class="inline-code">In 2</span> automatically).</li>
+            <li>Add <strong>Refresh Panel (Gold)</strong> wired to SettingsMenu_Screen so sub-panels close, scrollbars reset to top, and intros replay on every visit.</li>
+            <li>Click <strong>Auto-Tidy</strong>, confirm the Health Badge shows <strong>✓ Ready</strong>, and click <strong>COMPILE &amp; CONNECT</strong>.</li>
+          </ol>
+          <div class="callout">
+            <strong>Wiring Settings Top Tabs (VIDEO | AUDIO | CONTROLS | ACCESSIBILITY)</strong>
+            Drag <span class="inline-code">SettingsMenu_Screen</span> onto the grid as a Screen Buttons Card, create 4 <strong>Scroll To Section (Gold)</strong> nodes pointing to <span class="inline-code">Settings_ScrollView</span> and each section RectTransform, wire each tab port, and click COMPILE &amp; CONNECT.
+          </div>
+        </section>
+
+        <!-- CHAPTER 7 -->
+        <section id="ch7" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-green">Applies to: Pinwheel Thread (Package 2)</span>
+            <span class="tag">Chapter 7</span>
+          </div>
+          <h2>Node Cheat Sheet &amp; v1.1 Reliability Features</h2>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead><tr><th>Color</th><th>Node Name</th><th>What It Does</th></tr></thead>
+              <tbody>
+                <tr><td><span class="node-pill pill-purple">Purple</span></td><td>Start Disabled</td><td>Disables connected objects in <span class="inline-code">Awake()</span> before frame 1. Plugs only into purple 'Start Off' ports.</td></tr>
+                <tr><td><span class="node-pill pill-blue">Blue</span></td><td>Button Trigger</td><td>Fires when a single Legacy Button is clicked.</td></tr>
+                <tr><td><span class="node-pill pill-blue">Blue</span></td><td>Screen Buttons Card</td><td>Groups all buttons of a menu into one card (skips &lt; / &gt; arrows) and preserves wires on Refresh.</td></tr>
+                <tr><td><span class="node-pill pill-blue">Blue</span></td><td>Escape / Back Key</td><td>Listens to Escape via Unity Input System (or Legacy Input fallback) with optional Active Scope.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Switch Menu</td><td>Opens Next Menu(s) and closes Current Menu(s) with history tracking &amp; AutoParentScreenRoot backdrop handling.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Refresh Panel</td><td>Snapshots default child states in <span class="inline-code">Awake()</span>, restores closed popups, resets scrolls &amp; replays intros.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Toggle / Overlay</td><td>Opens, closes, or toggles a popup without closing the menu behind it.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Back (Auto-History)</td><td>Returns to whichever menu opened the current screen (with optional Fallback).</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Scroll To Section</td><td>Jumps a ScrollRect smoothly to a target Section RectTransform.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>UI Sound</td><td>Pass-through: plays an AudioClip via an AudioSource, then triggers 'Then'.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Custom Hook</td><td>Generates a public C# event (and optional UnityEvent) without touching generated code.</td></tr>
+                <tr><td><span class="node-pill pill-green">Green</span></td><td>Menu Target</td><td>Any menu root or panel GameObject, with 'Bind to Parent' button &amp; purple 'Start Off' port.</td></tr>
+                <tr><td><span class="node-pill pill-green">Green</span></td><td>Scene / Quit</td><td>Loads a Unity Scene by name, or quits cleanly (stops Play Mode in Editor).</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:0.84rem;">* All Gold Action nodes support Multi-Input: drop additional trigger wires onto the node body to create In 2, In 3, etc.</p>
+          <h3>v1.1 Reliability Protections</h3>
+          <ul>
+            <li><strong>Rename-Proof &amp; Move-Proof (GlobalObjectId):</strong> Tracks both <span class="inline-code">GlobalObjectId</span> and Hierarchy Path to self-heal moved or renamed objects automatically.</li>
+            <li><strong>Duplicate Sibling Protection:</strong> Distinctly tracks same-named siblings (<span class="inline-code">Button[#1]</span> vs <span class="inline-code">Button[#2]</span>).</li>
+            <li><strong>Live Pre-Compile Health Badge:</strong> Click <span class="inline-code">⚠ N Issues ▾</span> to jump to broken nodes or run 1-click Auto-Repair Paths.</li>
+            <li><strong>Prefab Mode Guard &amp; Multi-Scene Support:</strong> Warns if compiling inside isolated Prefab Mode and resolves additively loaded scenes.</li>
+          </ul>
+        </section>
+
+        <!-- CHAPTER 8 -->
+        <section id="ch8" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-gold">Applies to: Pinwheel Compose (.pwui) &amp; Pinwheel Thread (.pwthread)</span>
+            <span class="tag">Chapter 8</span>
+          </div>
+          <h2>Sending UI Across Different Unity Projects</h2>
+          <ul>
+            <li><strong>Export Menus (.pwui — Pinwheel Compose):</strong> Click <strong>Export .pwui</strong> (5–15 KB file), <strong>Copy</strong> (clipboard text), or <strong>Export Bundle</strong>. Your teammate imports or pastes inside their active scene and gets live-editable UI immediately.</li>
+            <li><strong>GUID-Free Safety:</strong> <span class="inline-code">.pwui</span> files store Font and Sprite names instead of raw project GUIDs. Keep <strong>Import Uses Active Theme = ON</strong> to adopt the receiving project's fonts, sprites, and colors.</li>
+            <li><strong>Export Flows (.pwthread — Pinwheel Thread):</strong> Click <span class="inline-code">Share ▾ → Export Graph (.pwthread)</span>. Local GlobalObjectIds are stripped automatically so your teammate imports the graph and clicks <strong>COMPILE &amp; CONNECT</strong>.</li>
+          </ul>
+        </section>
+
+        <!-- CHAPTER 9 -->
+        <section id="ch9" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-green">Applies to: Pinwheel Thread (Package 2)</span>
+            <span class="tag">Chapter 9</span>
+          </div>
+          <h2>Connecting Gameplay &amp; PurrNet Code (Custom Hook)</h2>
+          <p>
+            Never hand-edit <span class="inline-code">PinwheelThread_UIFlow.cs</span> because re-compiling overwrites it. Add a <strong>Custom Hook (Gold)</strong> node, set its C# Event Name (e.g., <span class="inline-code">OnCreateLobbyClicked</span>), compile, and subscribe from your own script:
+          </p>
+          <div class="code-block">
+            <div class="code-head">
+              <span>LobbyNetworkBridge.cs — Pinwheel Thread Custom Hook Example</span>
+              <button type="button" class="copy-btn" data-copy-target="hookCode">Copy C#</button>
+            </div>
+            <pre id="hookCode">using UnityEngine;
+
+public class LobbyNetworkBridge : MonoBehaviour
+{
+    [SerializeField] private PinwheelThread_UIFlow uiFlow;
+
+    private void OnEnable()
+    {
+        if (uiFlow != null)
+            uiFlow.OnCreateLobbyClicked += HandleCreateLobby;
+    }
+
+    private void OnDisable()
+    {
+        if (uiFlow != null)
+            uiFlow.OnCreateLobbyClicked -= HandleCreateLobby;
+    }
+
+    private void HandleCreateLobby()
+    {
+        // Trigger your PurrNet lobby creation or game logic here
+        Debug.Log("[Pinwheel Studios] Creating PurrNet Lobby...");
+    }
+}</pre>
+          </div>
+        </section>
+
+        <!-- CHAPTER 10 -->
+        <section id="ch10" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-gold">Applies to: Pinwheel Compose, Motion &amp; Thread</span>
+            <span class="tag">Chapter 10</span>
+          </div>
+          <h2>Troubleshooting: 8 Common Issues</h2>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead><tr><th>Problem</th><th>Asset</th><th>Fix</th></tr></thead>
+              <tbody>
+                <tr><td>Toolbar shows '⚠ Issues ▾' or red '!' border</td><td>Pinwheel Thread</td><td>Click the badge → jump to the node → re-assign the object/scene name and click COMPILE &amp; CONNECT.</td></tr>
+                <tr><td>'Exit Prefab Mode First' popup on compile</td><td>Pinwheel Thread</td><td>Click the Hierarchy back arrow to exit Prefab Mode back to your Scene, then compile.</td></tr>
+                <tr><td>Dark background stays on screen when switching</td><td>Pinwheel Thread</td><td>Set Switch Menu Target Scope to <span class="inline-code">AutoParentScreenRoot</span> (or click 'Bind to Parent') and re-compile.</td></tr>
+                <tr><td>Buttons don't do anything in Play Mode</td><td>Pinwheel Thread</td><td>Confirm <span class="inline-code">PinwheelThread_Router</span> is Active with zero <span class="inline-code">(None)</span> fields and an EventSystem exists.</td></tr>
+                <tr><td>New Compose button missing on Thread Card</td><td>Compose + Thread</td><td>Select the blue Screen Buttons Card in Thread and click <strong>Refresh Child Buttons</strong>. Existing wires stay intact.</td></tr>
+                <tr><td>Sub-panel stays stuck open on menu reopen</td><td>Pinwheel Thread</td><td>Add a <strong>Refresh Panel (Gold)</strong> node wired to that menu and trigger it on open.</td></tr>
+                <tr><td>Cinematic Tracking looks like normal Fade In</td><td>Pinwheel Motion</td><td>Attach Panel Intro directly to the <span class="inline-code">TextMeshProUGUI</span> object (e.g., Game_Title) rather than its parent card.</td></tr>
+                <tr><td>Text labels appear blank in a fresh project</td><td>Pinwheel Compose</td><td>Run <span class="inline-code">Window → TextMeshPro → Import TMP Essential Resources</span>, then click Apply Theme to Scene.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             DOCUMENT 2 BANNER: UI PRODUCTION WORKFLOW
+             ================================================================ -->
+        <div id="suite-workflow" class="doc-group-banner" data-asset="suite">
+          <div class="doc-group-meta">
+            <span class="tag tag-gold">Asset: Pinwheel Compose &amp; Pinwheel Thread (v1.1)</span>
+            <span class="tag">Document 2 of 2 · Standard Operating Workflow</span>
+          </div>
+          <h2>The 5-Stage UI Production Workflow</h2>
+          <p>Recommended production order for solo developers and co-op teams using Pinwheel Compose, Pinwheel Motion, and Pinwheel Thread together.</p>
+        </div>
+
+        <!-- WORKFLOW: 5-STAGE PIPELINE -->
+        <section id="wf-pipeline" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-gold">Applies to: Pinwheel Compose, Motion &amp; Thread</span>
+            <span class="tag">Workflow Guide</span>
+          </div>
+          <h2>The 5-Stage Pipeline</h2>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead><tr><th>Stage</th><th>Asset / Tool Used</th><th>Goal</th><th>Output Artifact</th></tr></thead>
+              <tbody>
+                <tr><td>Stage 1: Art &amp; Theme Lock</td><td>Pinwheel Compose (PWUI_Theme)</td><td>Lock fonts, palette, 9-slice sprites &amp; watermark once.</td><td class="mono">Saved PWUI_Theme .asset</td></tr>
+                <tr><td>Stage 2: Screen Architecture</td><td>Pinwheel Compose</td><td>Build screens independently using Solo Preview &amp; Custom Slots.</td><td class="mono">PWUI_Screen hierarchy</td></tr>
+                <tr><td>Stage 3: Tactile Feel &amp; Juice</td><td>Pinwheel Motion</td><td>Layer Button Feel &amp; OnEnable Panel Intro onto finalized layouts.</td><td class="mono">Zero-GC procedural motion</td></tr>
+                <tr><td>Stage 4: Visual Flow Wiring</td><td>Pinwheel Thread</td><td>Wire Start Disabled, Switch Menu, Refresh Panel &amp; Escape/Back.</td><td class="mono">1 auto-bound C# Router</td></tr>
+                <tr><td>Stage 5: Gameplay Bridge</td><td>Pinwheel Thread (Custom Hooks)</td><td>Subscribe from gameplay / PurrNet scripts without editing generated code.</td><td class="mono">Decoupled C# events</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <strong>Recommended Order</strong>
+            Lock Theme → Build Solo Screens → Add Motion Juice → Wire with Start Disabled &amp; Refresh Panel → Bridge via Custom Hooks.
+          </div>
+        </section>
+
+        <!-- WORKFLOW: PARALLEL TEAMWORK -->
+        <section id="wf-team" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-gold">Applies to: Pinwheel Compose &amp; Pinwheel Thread</span>
+            <span class="tag">Team Workflow</span>
+          </div>
+          <h2>Parallel Teamwork Across Separate Unity Projects</h2>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead><tr><th>Role</th><th>Actions in Their Unity Project</th><th>Handoff Step</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>UI / Menu Creator<br /><span class="mono" style="font-size:0.72rem;color:var(--ink-dim);">Project A</span></td>
+                  <td>1. Builds &amp; edits screens in Pinwheel Compose.<br />2. Wires flows in Pinwheel Thread &amp; tests in Play Mode.</td>
+                  <td>Exports <span class="inline-code">.pwui</span> in Compose + <span class="inline-code">.pwthread</span> in Thread and sends via Discord.</td>
+                </tr>
+                <tr>
+                  <td>Gameplay / Network Dev<br /><span class="mono" style="font-size:0.72rem;color:var(--ink-dim);">Project B</span></td>
+                  <td>1. Opens active scene.<br />2. Imports UI in Compose (<span class="inline-code">Import Uses Active Theme = ON</span>).<br />3. Imports graph in Thread &amp; clicks COMPILE &amp; CONNECT.</td>
+                  <td>Subscribes PurrNet / Gameplay scripts to Custom Hook C# events on <span class="inline-code">PinwheelThread_Router</span>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- WORKFLOW: RELEASE CHECKLIST -->
+        <section id="wf-checklist" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-gold">Applies to: Pinwheel Compose, Motion &amp; Thread</span>
+            <span class="tag">Release Checklist</span>
+          </div>
+          <h2>60-Second Release Checklist</h2>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead><tr><th>Check</th><th>What to Verify</th><th>Why It Matters</th></tr></thead>
+              <tbody>
+                <tr><td>1. Router Active</td><td><span class="inline-code">PinwheelThread_Router</span> is active in starting scene with zero <span class="inline-code">(None)</span> fields.</td><td>Ensures button listeners and Start Disabled rules run on boot.</td></tr>
+                <tr><td>2. Health Badge Green</td><td>Pinwheel Thread toolbar displays <strong>✓ Ready</strong> (0 errors).</td><td>Confirms no deleted objects or empty scene names remain.</td></tr>
+                <tr><td>3. Pause TimeScale Test</td><td>Test Pause Menu &amp; Settings at <span class="inline-code">Time.timeScale = 0</span>.</td><td>Confirms unscaledDeltaTime motion and clicks work while paused.</td></tr>
+                <tr><td>4. Aspect Ratio Sweep</td><td>Preview Game View in 16:9, 21:9 Ultrawide, and 16:10.</td><td>Confirms CanvasScaler keeps modal cards centered without clipping.</td></tr>
+                <tr><td>5. Clean Package Export</td><td>Uncheck 'Include dependencies' and exclude <span class="inline-code">Generated/</span> when exporting .unitypackages.</td><td>Keeps Compose &amp; Thread lightweight and project-agnostic.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             ASSET 2: UNITY MESHLOD STUDIO (OPEN SOURCE)
+             ================================================================ -->
+        <div id="meshlod-docs" class="doc-group-banner oss-banner" data-asset="meshlod">
+          <div class="doc-group-meta">
+            <span class="tag tag-blue">Asset: Unity MeshLOD Studio (Open Source)</span>
+            <span class="tag tag-green">MIT License</span>
+            <span class="tag">Unity 6.3+</span>
+          </div>
+          <h2>Unity MeshLOD Studio — Documentation</h2>
+          <p>Prefab-first LOD management and conversion tool. Repository: <a href="https://github.com/Bhavishya222/Unity-MeshLOD-Studio" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright);text-decoration:underline;">github.com/Bhavishya222/Unity-MeshLOD-Studio</a></p>
+        </div>
+
+        <section id="meshlod-guide" class="docs-chapter" data-asset="meshlod">
+          <div class="chapter-top-meta">
+            <span class="tag tag-blue">Applies to: Unity MeshLOD Studio</span>
+            <span class="tag">Quick-Start Guide</span>
+          </div>
+          <h2>Overview, Installation &amp; Usage</h2>
+          <p>
+            Unity's built-in Generate Mesh LODs feature lacks support for Static Batching, GPU Instancing, per-LOD material overrides, and custom transition thresholds. Unity MeshLOD Studio losslessly extracts generated Mesh LOD index buffers into compact standalone meshes and builds configurable <span class="inline-code">LODGroup</span> setups directly on your Prefab assets.
+          </p>
+          <h3>Core Features</h3>
+          <ul>
+            <li><strong>Prefab-First Workflow:</strong> Modifies the source <span class="inline-code">.prefab</span> asset safely so scene instances inherit updates without breaking instance-specific overrides.</li>
+            <li><strong>Lossless LOD Extraction:</strong> Uses <span class="inline-code">Mesh.AcquireReadOnlyMeshData</span> to extract and vertex-compact individual LOD levels without modifying original FBX models.</li>
+            <li><strong>Zero-Conflict LODGroups:</strong> Preserves your original MeshFilter/MeshRenderer for LOD0 to maintain FileIDs, scripts, and scene material overrides while building child nodes for LOD1+.</li>
+            <li><strong>Batch Optimizer &amp; Scene Auto Setup:</strong> Batch-process hundreds of prefabs or scan a full scene to group and update unique source prefabs.</li>
+            <li><strong>Preset Manager:</strong> Save, reuse, import, and export JSON presets (High Quality, Balanced, Performance) mapping screen-relative heights or real-world distances.</li>
+          </ul>
+          <h3>Installation</h3>
+          <ol>
+            <li>Download or clone <a href="https://github.com/Bhavishya222/Unity-MeshLOD-Studio" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright);">Unity-MeshLOD-Studio</a> from GitHub.</li>
+            <li>Place the <span class="inline-code">Assets/Editor/MeshLODStudio</span> folder into your Unity project.</li>
+            <li>Allow Unity to compile the included <span class="inline-code">.asmdef</span> file.</li>
+            <li>Open via <span class="inline-code">Tools → MeshLOD Studio → Open Studio</span>.</li>
+          </ol>
+          <h3>Usage</h3>
+          <ol>
+            <li>Ensure your 3D models have <strong>Generate mesh LODs</strong> enabled in their Model Importer (or use the 1-click enable button inside the tool).</li>
+            <li>Open <span class="inline-code">Tools → MeshLOD Studio → Open Studio</span>.</li>
+            <li>Select a <span class="inline-code">.prefab</span> asset in your Project window and review the structural analysis in the <strong>Prefab Studio</strong> tab.</li>
+            <li>Switch to the <strong>Mesh LOD Converter</strong> tab, select an optimization Preset, and click <strong>Convert Selected Objects &amp; Save Prefab</strong>.</li>
+          </ol>
+        </section>
+
+        <!-- ================================================================
+             ASSET 3: UNITY URP WORLD RESCALER (OPEN SOURCE)
+             ================================================================ -->
+        <div id="rescaler-docs" class="doc-group-banner oss-banner" data-asset="rescaler">
+          <div class="doc-group-meta">
+            <span class="tag tag-blue">Asset: Unity URP World Rescaler (Open Source)</span>
+            <span class="tag">Unity Editor · URP</span>
+          </div>
+          <h2>Unity URP World Rescaler — Documentation</h2>
+          <p>One-click scene, Terrain, collider, and URP light rescaler. Repository: <a href="https://github.com/Bhavishya222/Unity-URP-World-Rescaler" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright);text-decoration:underline;">github.com/Bhavishya222/Unity-URP-World-Rescaler</a></p>
+        </div>
+
+        <section id="rescaler-guide" class="docs-chapter" data-asset="rescaler" style="border-bottom:none;">
+          <div class="chapter-top-meta">
+            <span class="tag tag-blue">Applies to: Unity URP World Rescaler</span>
+            <span class="tag">Quick-Start Guide</span>
+          </div>
+          <h2>Overview, Installation &amp; Usage</h2>
+          <p>
+            Scaling a root GameObject in Unity breaks multi-tile terrain physics and ignores light ranges. Unity URP World Rescaler calculates exact proportions and clones terrain assets so oversized maps shrink cleanly in one click.
+          </p>
+          <h3>Features</h3>
+          <ul>
+            <li><strong>Safe Hierarchy Scaling:</strong> Repositions root objects without skewing nested terrain scale constraints.</li>
+            <li><strong>Terrain Cloning:</strong> Duplicates <span class="inline-code">TerrainData</span> and <span class="inline-code">TerrainLayers</span> before modifying them to preserve painted splatmaps and prevent stretched textures.</li>
+            <li><strong>Physics Sync:</strong> Automatically updates invisible <span class="inline-code">TerrainCollider</span> dimensions to match the visual mesh.</li>
+            <li><strong>URP Lighting Scaling:</strong> Scales Point/Spot light ranges and Camera clip planes to match the new world size, with an optional toggle to adjust light intensity.</li>
+          </ul>
+          <h3>Installation</h3>
+          <ol>
+            <li>Download <span class="inline-code">WorldRescalerWindow.cs</span> from <a href="https://github.com/Bhavishya222/Unity-URP-World-Rescaler" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright);">GitHub</a>.</li>
+            <li>Drop it anywhere inside an <span class="inline-code">Assets/Editor</span> folder in your Unity project.</li>
+          </ol>
+          <h3>Usage</h3>
+          <ol>
+            <li>Open <span class="inline-code">Tools → World Rescaler</span> from the top menu bar.</li>
+            <li>Set your <strong>Scale Factor</strong> (for example, if your world is 5× too big, set Scale Factor to <span class="inline-code">0.2</span>).</li>
+            <li>Check the options relevant to your scene (Terrain scaling, URP light ranges, etc.).</li>
+            <li>Click <strong>Scan Active Scene</strong> to check for structural blockers, then click <strong>Apply Rescale</strong>.</li>
+          </ol>
+          <div class="callout">
+            <strong>Backup &amp; Re-Bake Note</strong>
+            Always save a project backup before modifying scene scales. Baked lightmaps, NavMesh data, and fog distances will need to be re-baked manually after rescaling.
+          </div>
+
+          <div class="suite-cta-bar" style="margin-top:28px;">
+            <div class="suite-cta-text">
+              <strong>Need support?</strong> Email <a href="mailto:pinwheels.studio.help@gmail.com" style="color:var(--gold-bright);">pinwheels.studio.help@gmail.com</a> or reach out on Discord.
+            </div>
+            <div class="suite-cta-actions">
+              <a href="https://discord.gg/wGyS56Tn2h" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Discord Support ↗</a>
+              <a href="index.html" class="btn">← Back to Home</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© 2026 Pinwheel Studios · Official Documentation</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="https://github.com/Bhavishya222" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://discord.gg/wGyS56Tn2h" target="_blank" rel="noopener noreferrer">Discord</a>
+          <a href="mailto:pinwheels.studio.help@gmail.com">pinwheels.studio.help@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

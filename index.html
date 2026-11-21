@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinwheel Studios — Games &amp; Unity Tools</title>
+  <meta name="description" content="Pinwheel Studios is an independent game studio and Unity tool developer. Creators of The Reflection, Thou Shalt Not Pass, Pinwheel Compose, Pinwheel Thread, Unity MeshLOD Studio, and Unity URP World Rescaler." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <img src="assets/pinwheel-mark.png" alt="" aria-hidden="true" class="bg-pinwheel" />
+
+  <div class="page-wrap">
+    <!-- TOP NAVIGATION -->
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="index.html" class="brand" aria-label="Pinwheel Studios Home">
+          <img src="assets/pinwheel-mark.png" alt="Pinwheel Studios Logo" class="brand-mark" />
+          <span class="brand-title">PINWHEEL STUDIOS</span>
+        </a>
+
+        <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle Menu">Menu</button>
+
+        <nav class="nav-links" aria-label="Primary Navigation">
+          <a href="#tools">Asset Store</a>
+          <a href="#games">Games</a>
+          <a href="#opensource">Open Source</a>
+          <a href="#support">Support</a>
+          <a href="docs.html" class="nav-docs">Documentation</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-top">
+            <div class="hero-kicker">Independent Game Studio &amp; Unity Asset Publisher</div>
+            <h1 class="hero-title">Independent games and Unity 6 tools.</h1>
+            <p class="hero-lead">
+              Pinwheel Studios develops multiplayer PC games for Steam and builds Unity 6 editor tools for UI creation, LOD conversion, and scene scaling.
+            </p>
+            <div class="hero-actions">
+              <a href="#tools" class="btn btn-primary">Explore Unity Tools</a>
+              <a href="#games" class="btn">Our Games</a>
+              <a href="docs.html" class="btn btn-gold">Read Documentation</a>
+            </div>
+          </div>
+
+          <div class="overview-strip" aria-label="Studio Releases">
+            <a href="#tools" class="overview-cell">
+              <span class="overview-kicker">Unity Asset Store · Coming Soon</span>
+              <span class="overview-name">Pinwheel Compose &amp; Thread</span>
+              <span class="overview-sub">2-in-1 UI toolkit for Unity 6.0 / 6.3+</span>
+            </a>
+            <a href="#games" class="overview-cell">
+              <span class="overview-kicker">Steam · Published</span>
+              <span class="overview-name">The Reflection</span>
+              <span class="overview-sub">Co-op psychological horror</span>
+            </a>
+            <a href="#games" class="overview-cell">
+              <span class="overview-kicker">Steam · In Development</span>
+              <span class="overview-name">Thou Shalt Not Pass</span>
+              <span class="overview-sub">Asymmetrical medieval multiplayer</span>
+            </a>
+            <a href="#opensource" class="overview-cell">
+              <span class="overview-kicker">GitHub · Open Source</span>
+              <span class="overview-name">2 Unity Editor Tools</span>
+              <span class="overview-sub">MeshLOD Studio &amp; URP World Rescaler</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 1: UNITY ASSET STORE SUITE -->
+      <section id="tools" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-label">Unity Asset Store</div>
+              <h2 class="section-title">Pinwheel Compose &amp; Pinwheel Thread</h2>
+              <p class="section-desc">
+                Two standalone Unity packages (with Pinwheel Motion included in Compose) for building, animating, and wiring menus in Unity 6.0 LTS and 6.3+.
+              </p>
+            </div>
+            <div>
+              <a href="docs.html#suite-tutorial" class="btn btn-gold">Suite Documentation →</a>
+            </div>
+          </div>
+
+          <div class="compat-strip">
+            <span class="tag tag-gold">Coming Soon on Unity Asset Store</span>
+            <span class="tag">Unity 6.0 LTS &amp; 6.3+</span>
+            <span class="tag">Built-in / URP / HDRP</span>
+            <span class="tag">Legacy UI + TextMeshPro</span>
+            <span class="tag">New &amp; Legacy Input</span>
+            <span class="tag">Standalone .asmdef Packages</span>
+            <span class="tag">Unscaled Pause Safe</span>
+          </div>
+
+          <!-- INTERACTIVE PINWHEEL THREAD FLOW PREVIEW -->
+          <div class="thread-sandbox">
+            <div class="sandbox-toolbar">
+              <div class="sandbox-title">
+                <span>Pinwheel Thread — Flow Preview</span>
+                <span class="health-badge">✓ Ready · 0 Issues</span>
+              </div>
+              <div class="preset-tabs" role="tablist" aria-label="Pinwheel Thread Workflow Examples">
+                <button class="preset-tab active" data-flow="settings">Main → Settings + Esc</button>
+                <button class="preset-tab" data-flow="lobby">Fresh Lobby Reset</button>
+                <button class="preset-tab" data-flow="purrnet">PurrNet Custom Hook</button>
+              </div>
+            </div>
+
+            <div class="node-stage">
+              <div id="threadNodeStage" class="node-flow-grid"></div>
+            </div>
+
+            <div class="sandbox-inspector">
+              <div class="inspector-info">
+                <div id="inspectorLabel" class="inspector-label">Selected Node</div>
+                <p id="inspectorDesc" class="inspector-desc"></p>
+              </div>
+              <pre id="inspectorCode" class="inspector-code"></pre>
+            </div>
+          </div>
+
+          <!-- 3-COLUMN BREAKDOWN -->
+          <div class="pillars-grid">
+            <article class="pillar">
+              <div class="pillar-badge">Package 1</div>
+              <h3>Pinwheel Compose</h3>
+              <div class="pillar-sub">Tools → Pinwheel Studios → Pinwheel Compose</div>
+              <p>
+                Generates Main Menu, 4-tab Settings, Language Icon Submenu, Create Lobby, and Lobby Room screens with live Solo Preview, saved themes, and prefab slots.
+              </p>
+              <ul class="pillar-list">
+                <li>4 theme presets: Dark Fantasy, Blood &amp; Iron, Modern Slate, Horror Minimal</li>
+                <li>Live Ctrl+Z editing for sliders, steppers, toggles, keybinds, fonts, and 9-slice art</li>
+                <li>Export and import editable menus as 5–15 KB .pwui files across Unity projects</li>
+                <li>Register existing hand-built UI panels with Lock Theme Sync protection</li>
+              </ul>
+            </article>
+
+            <article class="pillar">
+              <div class="pillar-badge">Included in Compose</div>
+              <h3>Pinwheel Motion</h3>
+              <div class="pillar-sub">Add Component → Pinwheel Motion</div>
+              <p>
+                Procedural C# animations for button hover/click feedback (Button Feel) and OnEnable panel reveals (Panel Intro), running on Time.unscaledDeltaTime without Animator controllers.
+              </p>
+
+              <div class="motion-lab">
+                <div class="motion-lab-label">
+                  <span>Button Feel Preset Preview</span>
+                  <span>6 presets</span>
+                </div>
+                <div class="motion-chips">
+                  <button type="button" class="motion-chip" data-preset="crisp">Crisp Pop</button>
+                  <button type="button" class="motion-chip" data-preset="forge">Heavy Forge</button>
+                  <button type="button" class="motion-chip" data-preset="nudge">Slide Nudge</button>
+                  <button type="button" class="motion-chip" data-preset="spring">Spring Bounce</button>
+                  <button type="button" class="motion-chip" data-preset="tilt">Subtle Tilt</button>
+                  <button type="button" class="motion-chip" data-preset="dread">Dread Flicker</button>
+                </div>
+                <div id="motionNote" class="motion-note">Hover or click a preset above to preview it.</div>
+              </div>
+
+              <ul class="pillar-list">
+                <li>8 Panel Intro presets including Cinematic Tracking and 1-click Auto-Stagger Children</li>
+                <li>Caches rest transforms in Awake() and resets on OnDisable() to prevent drift</li>
+              </ul>
+            </article>
+
+            <article class="pillar">
+              <div class="pillar-badge">Package 2</div>
+              <h3>Pinwheel Thread</h3>
+              <div class="pillar-sub">Tools → Pinwheel Studios → Pinwheel Thread</div>
+              <p>
+                A visual Left-to-Right node editor for wiring Buttons, Escape keys, Auto-History navigation, Start Disabled rules, and Refresh Panel resets into a single generated C# router script.
+              </p>
+              <ul class="pillar-list">
+                <li>Tracks objects via GlobalObjectId and Hierarchy Path so renaming or moving objects will not break wires</li>
+                <li>Pre-compile Health Badge, Prefab Mode guard, and additive multi-scene support</li>
+                <li>Multi-Input action nodes let buttons and keyboard shortcuts share one action</li>
+                <li>Custom Hook C# events for PurrNet and gameplay scripts without editing generated code</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="suite-cta-bar">
+            <div class="suite-cta-text">
+              <strong>v1.1 Documentation is live.</strong> Review the Beginner's Tutorial and 5-Stage UI Production Workflow ahead of the Unity Asset Store release.
+            </div>
+            <div class="suite-cta-actions">
+              <!-- WHEN LIVE ON UNITY ASSET STORE: Replace this <span> with an <a href="YOUR_URL" target="_blank" rel="noopener noreferrer" class="btn btn-gold">View on Unity Asset Store ↗</a> -->
+              <span class="btn btn-muted" aria-disabled="true">Unity Asset Store — Coming Soon</span>
+              <a href="docs.html#suite-tutorial" class="btn btn-primary">Read Full Docs (v1.1)</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: GAMES -->
+      <section id="games" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-label">Games</div>
+              <h2 class="section-title">Our Titles</h2>
+              <p class="section-desc">
+                Multiplayer PC games developed in Unity by Pinwheel Studios.
+              </p>
+            </div>
+          </div>
+
+          <div class="games-grid">
+            <!-- Game 1: The Reflection -->
+            <article class="game-card">
+              <div class="game-capsule">
+                <img src="assets/the-reflection.jpg" alt="The Reflection — Cooperative Psychological Horror on Steam" />
+              </div>
+              <div class="game-body">
+                <div class="game-badges">
+                  <span class="tag tag-crimson">Published on Steam</span>
+                  <span class="tag">Co-op Psychological Horror</span>
+                </div>
+                <h3 class="game-title">The Reflection</h3>
+                <p class="game-desc">
+                  A cooperative psychological horror game for PC built around randomized rituals, tense exploration, and survival alongside your team while confronting The Skin-Taker.
+                </p>
+                <div class="game-meta-grid">
+                  <div><span>Platform</span>PC (Steam)</div>
+                  <div><span>Mode</span>Online Co-op</div>
+                  <div><span>Engine</span>Unity</div>
+                  <div><span>Status</span>Live on Steam</div>
+                </div>
+                <div class="game-actions">
+                  <a href="https://store.steampowered.com/app/4314340/The_Reflection/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    View on Steam ↗
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Game 2: Thou Shalt Not Pass -->
+            <article class="game-card">
+              <div class="game-capsule">
+                <img src="assets/thou-shalt-not-pass.jpg" alt="Thou Shalt Not Pass — Chaotic Medieval Multiplayer Game of Knights and Thieves" />
+              </div>
+              <div class="game-body">
+                <div class="game-badges">
+                  <span class="tag tag-blue">In Development · Store Review</span>
+                  <span class="tag">Asymmetrical Multiplayer</span>
+                </div>
+                <h3 class="game-title">Thou Shalt Not Pass</h3>
+                <p class="game-desc">
+                  A chaotic medieval multiplayer game of Knights and Thieves. Work together to loot the kingdom and escape, or hunt down every last criminal. Choose your side, master your abilities, and survive the chase!
+                </p>
+
+                <details class="game-details">
+                  <summary>Read full game overview</summary>
+                  <div class="game-details-body">
+                    <p>
+                      Deep within a medieval kingdom, a group of thieves has decided to make off with its riches. Unfortunately for them, the Queen has other plans. Her Knights have been ordered to hunt them down. No prisoners. No mercy.
+                    </p>
+                    <p>
+                      <strong>THOU SHALT NOT PASS</strong> is a fast-paced, asymmetrical multiplayer game where one side hunts and the other desperately tries to escape. Because there's a ship waiting, and the Knights aren't particularly fond of letting criminals leave.
+                    </p>
+
+                    <div class="factions-split">
+                      <div class="faction-box">
+                        <strong>The Thieves</strong>
+                        Work together to gather treasure, prepare the ancient Watchtowers, and signal your escape ship before the Knights catch you. The more treasure you carry, the bigger a target you become.
+                      </div>
+                      <div class="faction-box">
+                        <strong>The Knights</strong>
+                        The Queen has given you a simple order: kill every last Thief. Track down the criminals, interrupt their plans, and stop them from escaping with the kingdom's riches.
+                      </div>
+                    </div>
+
+                    <h4>Different Classes. Different Ways to Play.</h4>
+                    <p>
+                      Both sides feature multiple playable classes with distinct abilities and playstyles across woodland paths, medieval settlements, and ancient structures. Explore multiple maps, discover shortcuts, and turn an ordinary chase into complete chaos.
+                    </p>
+                  </div>
+                </details>
+
+                <div class="game-meta-grid">
+                  <div><span>Platform</span>PC (Steam)</div>
+                  <div><span>Mode</span>Asymmetrical PvP</div>
+                  <div><span>Engine</span>Unity</div>
+                  <div><span>Status</span>Coming Soon</div>
+                </div>
+                <div class="game-actions">
+                  <!-- WHEN STEAM PAGE IS APPROVED: Swap this <span> for your Steam link -->
+                  <span class="btn btn-muted" aria-disabled="true">Steam Page — Coming Soon</span>
+                  <a href="https://discord.gg/wGyS56Tn2h" target="_blank" rel="noopener noreferrer" class="btn">
+                    Follow on Discord ↗
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: OPEN-SOURCE TOOLS -->
+      <section id="opensource" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-label">Open Source</div>
+              <h2 class="section-title">Free Unity Tools on GitHub</h2>
+              <p class="section-desc">
+                Public Unity Editor extensions released by Pinwheel Studios. Download directly from GitHub and drop into your project's Assets/Editor folder.
+              </p>
+            </div>
+          </div>
+
+          <div class="oss-list">
+            <!-- Tool 1: Unity MeshLOD Studio -->
+            <article class="oss-card">
+              <div class="oss-tags">
+                <span class="tag tag-blue">Unity 6.3+</span>
+                <span class="tag tag-green">MIT License</span>
+                <span class="tag">Prefab-First</span>
+              </div>
+              <h3 class="oss-name">Unity MeshLOD Studio</h3>
+              <p class="oss-summary">
+                A Prefab-first LOD management and conversion tool for Unity 6.3+. Losslessly extracts generated Mesh LOD index buffers into compact standalone meshes and builds configurable LODGroup setups directly on your source .prefab assets.
+              </p>
+              <ul class="oss-specs">
+                <li><strong>Lossless Extraction:</strong> Uses <span class="inline-code">Mesh.AcquireReadOnlyMeshData</span> to vertex-compact LOD levels without modifying original FBX models.</li>
+                <li><strong>Zero-Conflict LODGroups:</strong> Preserves your original MeshFilter/MeshRenderer on LOD0 to maintain FileIDs, scripts, and scene overrides.</li>
+                <li><strong>Batch &amp; Scene Auto Setup:</strong> Batch-process hundreds of prefabs or scan a scene to update unique source prefabs automatically.</li>
+                <li><strong>JSON Preset Manager:</strong> Save, reuse, import, and export screen-relative height or distance profiles.</li>
+              </ul>
+              <div class="oss-actions">
+                <a href="https://github.com/Bhavishya222/Unity-MeshLOD-Studio" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  View on GitHub ↗
+                </a>
+                <a href="docs.html#meshlod-docs" class="btn">Quick-Start Docs</a>
+              </div>
+            </article>
+
+            <!-- Tool 2: Unity URP World Rescaler -->
+            <article class="oss-card">
+              <div class="oss-tags">
+                <span class="tag tag-blue">Unity Editor</span>
+                <span class="tag">URP</span>
+                <span class="tag">Single Script</span>
+              </div>
+              <h3 class="oss-name">Unity URP World Rescaler</h3>
+              <p class="oss-summary">
+                A Unity Editor extension to rescale entire scenes, nested Terrains, and URP lights in one click without breaking terrain physics, painted splatmaps, or texture tiling.
+              </p>
+              <ul class="oss-specs">
+                <li><strong>Safe Hierarchy Scaling:</strong> Repositions root objects without skewing nested multi-tile terrain scale constraints.</li>
+                <li><strong>Terrain Cloning:</strong> Duplicates <span class="inline-code">TerrainData</span> and <span class="inline-code">TerrainLayers</span> before scaling to preserve painted splatmaps.</li>
+                <li><strong>Physics Sync:</strong> Automatically updates <span class="inline-code">TerrainCollider</span> dimensions to match the rescaled visual mesh.</li>
+                <li><strong>URP Lighting &amp; Camera Sync:</strong> Scales Point/Spot light ranges, camera clip planes, and optional light intensity.</li>
+              </ul>
+              <div class="oss-actions">
+                <a href="https://github.com/Bhavishya222/Unity-URP-World-Rescaler" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  View on GitHub ↗
+                </a>
+                <a href="docs.html#rescaler-docs" class="btn">Quick-Start Docs</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: SUPPORT & CONTACT -->
+      <section id="support" class="section" style="border-bottom:none;">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-label">Support &amp; Contact</div>
+              <h2 class="section-title">Publisher Support &amp; Links</h2>
+              <p class="section-desc">
+                Technical support for our Unity Asset Store packages, open-source tools, and games.
+              </p>
+            </div>
+          </div>
+
+          <div class="support-grid">
+            <div class="support-panel">
+              <h3>Email Support</h3>
+              <p>
+                For Asset Store support, bug reports, licensing questions, or business inquiries, contact us directly by email or through our Discord server.
+              </p>
+              <div class="email-box">
+                <a href="mailto:pinwheels.studio.help@gmail.com">pinwheels.studio.help@gmail.com</a>
+                <button type="button" class="copy-btn" data-copy="pinwheels.studio.help@gmail.com">Copy</button>
+              </div>
+              <ul class="support-checklist">
+                <li>• Include your Unity version (e.g., Unity 6.0 LTS or 6.3+) and render pipeline.</li>
+                <li>• State the asset name (Pinwheel Compose, Pinwheel Thread, MeshLOD Studio, or URP World Rescaler).</li>
+                <li>• Attach Console error logs or steps to reproduce if reporting a bug.</li>
+              </ul>
+            </div>
+
+            <div class="support-panel">
+              <h3>Official Links</h3>
+              <p>
+                Find our repositories, documentation, game updates, and community channels below.
+              </p>
+              <div class="channels-grid">
+                <a href="https://discord.gg/wGyS56Tn2h" target="_blank" rel="noopener noreferrer" class="channel-link">
+                  <span>Discord<span class="channel-sub">Support &amp; Community</span></span>
+                  <span>↗</span>
+                </a>
+                <a href="https://github.com/Bhavishya222" target="_blank" rel="noopener noreferrer" class="channel-link">
+                  <span>GitHub<span class="channel-sub">Bhavishya222</span></span>
+                  <span>↗</span>
+                </a>
+                <a href="https://x.com/pinwheelgames" target="_blank" rel="noopener noreferrer" class="channel-link">
+                  <span>X (Twitter)<span class="channel-sub">@pinwheelgames</span></span>
+                  <span>↗</span>
+                </a>
+                <a href="https://www.instagram.com/pinwheel_games" target="_blank" rel="noopener noreferrer" class="channel-link">
+                  <span>Instagram<span class="channel-sub">@pinwheel_games</span></span>
+                  <span>↗</span>
+                </a>
+                <a href="https://store.steampowered.com/app/4314340/The_Reflection/" target="_blank" rel="noopener noreferrer" class="channel-link">
+                  <span>Steam<span class="channel-sub">The Reflection</span></span>
+                  <span>↗</span>
+                </a>
+                <a href="docs.html" class="channel-link" style="border-color:rgba(212,175,55,0.45);">
+                  <span style="color:var(--gold-bright);">Documentation<span class="channel-sub">All Unity Assets</span></span>
+                  <span style="color:var(--gold-bright);">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© 2026 Pinwheel Studios. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="#tools">Asset Store</a>
+          <a href="#games">Games</a>
+          <a href="#opensource">Open Source</a>
+          <a href="docs.html">Documentation</a>
+          <a href="mailto:pinwheels.studio.help@gmail.com">Support</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
