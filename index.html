@@ -4,12 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pinwheel Studios — Games &amp; Unity Tools</title>
-  <meta name="description" content="Pinwheel Studios is an independent game studio and Unity tool developer. Creators of The Reflection, Thou Shalt Not Pass, Pinwheel Compose, Pinwheel Thread, Unity MeshLOD Studio, and Unity URP World Rescaler." />
+  <meta name="description" content="Pinwheel Studios is an independent game studio and Unity tool developer. Creators of The Reflection, Thou Shalt Not Pass, Pinwheel Compose, Pinwheel Thread, Pinwheel DreamSky, Unity MeshLOD Studio, and Unity URP World Rescaler." />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    @media (min-width: 1021px) {
+      .oss-list { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
 </head>
 <body>
   <img src="assets/pinwheel-mark.png" alt="" aria-hidden="true" class="bg-pinwheel" />
@@ -43,7 +48,7 @@
             <div class="hero-kicker">Independent Game Studio &amp; Unity Asset Publisher</div>
             <h1 class="hero-title">Independent games and Unity 6 tools.</h1>
             <p class="hero-lead">
-              Pinwheel Studios develops multiplayer PC games for Steam and builds Unity 6 editor tools for UI creation, LOD conversion, and scene scaling.
+              Pinwheel Studios develops multiplayer PC games for Steam and builds Unity 6 tools for UI creation, procedural URP shaders, LOD conversion, and scene scaling.
             </p>
             <div class="hero-actions">
               <a href="#tools" class="btn btn-primary">Explore Unity Tools</a>
@@ -70,8 +75,8 @@
             </a>
             <a href="#opensource" class="overview-cell">
               <span class="overview-kicker">GitHub · Open Source</span>
-              <span class="overview-name">2 Unity Editor Tools</span>
-              <span class="overview-sub">MeshLOD Studio &amp; URP World Rescaler</span>
+              <span class="overview-name">3 Unity Editor Tools</span>
+              <span class="overview-sub">DreamSky, MeshLOD Studio &amp; URP Rescaler</span>
             </a>
           </div>
         </div>
@@ -318,13 +323,38 @@
               <div class="section-label">Open Source</div>
               <h2 class="section-title">Free Unity Tools on GitHub</h2>
               <p class="section-desc">
-                Public Unity Editor extensions released by Pinwheel Studios. Download directly from GitHub and drop into your project's Assets/Editor folder.
+                Public Unity shaders and Editor extensions released by Pinwheel Studios. Download directly from GitHub and import into your project.
               </p>
             </div>
           </div>
 
           <div class="oss-list">
-            <!-- Tool 1: Unity MeshLOD Studio -->
+            <!-- Tool 1: Pinwheel DreamSky -->
+            <article class="oss-card">
+              <div class="oss-tags">
+                <span class="tag tag-blue">Unity 6.3+ · URP 17</span>
+                <span class="tag tag-green">MIT License</span>
+                <span class="tag">3 Variants</span>
+              </div>
+              <h3 class="oss-name">Pinwheel DreamSky</h3>
+              <p class="oss-summary">
+                A lightweight procedural night-sky shader and workflow suite for Unity URP. Built for stylized dark-fantasy and realistic night scenes with a toggleable PS1/PS2 Retro mode, Editor Texture Baker, and 1-draw-call Void Mist / Fake Water Plane.
+              </p>
+              <ul class="oss-specs">
+                <li><strong>Procedural Night Sky:</strong> Zero-loop spherical starfield, domain-warped RGBA nebula, backlit clouds, moon phases, ringed planet, and <span class="inline-code">_Time.y</span> shooting stars.</li>
+                <li><strong>PS1/PS2 Retro Mode:</strong> World-locked spherical pixelation, 4×4 ordered Bayer dithering, and colour quantization.</li>
+                <li><strong>World-Edge Blending:</strong> 1-click URP Horizon Fog sync plus an optional Void Mist or synced Night Water plane for hiding cliff bases.</li>
+                <li><strong>Built-In Baker &amp; Controller:</strong> 1-click RGBA noise &amp; moon crater baker, 4 presets, and optional zero-GC <span class="inline-code">PWSky_Controller</span>.</li>
+              </ul>
+              <div class="oss-actions">
+                <a href="https://github.com/Bhavishya222/Unity-URP-DreamSky" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  View on GitHub ↗
+                </a>
+                <a href="docs.html#dreamsky-docs" class="btn">Quick-Start Docs</a>
+              </div>
+            </article>
+
+            <!-- Tool 2: Unity MeshLOD Studio -->
             <article class="oss-card">
               <div class="oss-tags">
                 <span class="tag tag-blue">Unity 6.3+</span>
@@ -349,7 +379,7 @@
               </div>
             </article>
 
-            <!-- Tool 2: Unity URP World Rescaler -->
+            <!-- Tool 3: Unity URP World Rescaler -->
             <article class="oss-card">
               <div class="oss-tags">
                 <span class="tag tag-blue">Unity Editor</span>
@@ -402,7 +432,7 @@
               </div>
               <ul class="support-checklist">
                 <li>• Include your Unity version (e.g., Unity 6.0 LTS or 6.3+) and render pipeline.</li>
-                <li>• State the asset name (Pinwheel Compose, Pinwheel Thread, MeshLOD Studio, or URP World Rescaler).</li>
+                <li>• State the asset name (Pinwheel Compose, Pinwheel Thread, DreamSky, MeshLOD Studio, or URP World Rescaler).</li>
                 <li>• Attach Console error logs or steps to reproduce if reporting a bug.</li>
               </ul>
             </div>
