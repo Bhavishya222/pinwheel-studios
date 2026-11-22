@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Documentation — Pinwheel Studios Unity Tools</title>
-  <meta name="description" content="Official Unity documentation for Pinwheel Compose, Pinwheel Motion, Pinwheel Thread (v1.1), Pinwheel DreamSky, Unity MeshLOD Studio, and Unity URP World Rescaler by Pinwheel Studios." />
+  <meta name="description" content="Official Unity documentation for Pinwheel Compose, Pinwheel Motion, Pinwheel Localization, Pinwheel Thread (v1.6), Pinwheel DreamSky, Unity MeshLOD Studio, and Unity URP World Rescaler by Pinwheel Studios." />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +13,11 @@
   <style>
     @media (min-width: 1021px) {
       .asset-directory { grid-template-columns: repeat(2, 1fr); }
+    }
+    .tag-teal {
+      border-color: rgba(45, 212, 191, 0.45);
+      background: rgba(45, 212, 191, 0.11);
+      color: #5eead4;
     }
   </style>
 </head>
@@ -48,24 +53,25 @@
         <!-- ASSET 1: PINWHEEL COMPOSE & THREAD -->
         <div class="toc-asset-block">
           <div class="toc-asset-title">Asset: Pinwheel Compose &amp; Thread</div>
-          <div class="toc-group-label">Doc 1 · Beginner's Tutorial (v1.1)</div>
+          <div class="toc-group-label">Doc 1 · Beginner's Tutorial (v1.6)</div>
           <ul class="toc-list">
             <li><a href="#ch1"><span>1. Overview</span><span class="toc-pill">All</span></a></li>
             <li><a href="#ch2"><span>2. Setup &amp; Compat</span><span class="toc-pill">All</span></a></li>
-            <li><a href="#ch3"><span>3. Building Menus</span><span class="toc-pill">Compose</span></a></li>
+            <li><a href="#ch3"><span>3. Menus, Sub-Panels &amp; Blocks</span><span class="toc-pill">Compose</span></a></li>
             <li><a href="#ch4"><span>4. Themes &amp; Custom UI</span><span class="toc-pill">Compose</span></a></li>
-            <li><a href="#ch5"><span>5. Animations</span><span class="toc-pill">Motion</span></a></li>
-            <li><a href="#ch6"><span>6. Node Wiring</span><span class="toc-pill">Thread</span></a></li>
-            <li><a href="#ch7"><span>7. Nodes &amp; Reliability</span><span class="toc-pill">Thread</span></a></li>
-            <li><a href="#ch8"><span>8. Sharing Files</span><span class="toc-pill">Both</span></a></li>
-            <li><a href="#ch9"><span>9. PurrNet &amp; Hooks</span><span class="toc-pill">Thread</span></a></li>
-            <li><a href="#ch10"><span>10. Troubleshooting</span><span class="toc-pill">All</span></a></li>
+            <li><a href="#ch5"><span>5. Motion &amp; Text FX</span><span class="toc-pill">Motion</span></a></li>
+            <li><a href="#ch6"><span>6. 3-Step Localization</span><span class="toc-pill">Locale</span></a></li>
+            <li><a href="#ch7"><span>7. Thread &amp; Auto Prefs</span><span class="toc-pill">Thread</span></a></li>
+            <li><a href="#ch8"><span>8. Nodes &amp; Reliability</span><span class="toc-pill">Thread</span></a></li>
+            <li><a href="#ch9"><span>9. Sharing Files</span><span class="toc-pill">Both</span></a></li>
+            <li><a href="#ch10"><span>10. PurrNet &amp; Hooks</span><span class="toc-pill">Thread</span></a></li>
+            <li><a href="#ch11"><span>11. Troubleshooting</span><span class="toc-pill">All</span></a></li>
           </ul>
 
-          <div class="toc-group-label">Doc 2 · UI Production Workflow</div>
+          <div class="toc-group-label">Doc 2 · UI Production Workflow (v1.6)</div>
           <ul class="toc-list">
-            <li><a href="#wf-pipeline"><span>5-Stage Pipeline</span><span class="toc-pill">All</span></a></li>
-            <li><a href="#wf-team"><span>Team Workflow</span><span class="toc-pill">Both</span></a></li>
+            <li><a href="#wf-pipeline"><span>6-Stage Pipeline</span><span class="toc-pill">All</span></a></li>
+            <li><a href="#wf-team"><span>Team &amp; Safe Iteration</span><span class="toc-pill">All</span></a></li>
             <li><a href="#wf-checklist"><span>Release Checklist</span><span class="toc-pill">All</span></a></li>
           </ul>
         </div>
@@ -110,9 +116,9 @@
           <!-- EXPLICIT ASSET DIRECTORY -->
           <div class="asset-directory">
             <a href="#suite-tutorial" class="asset-dir-card">
-              <span class="tag tag-gold" style="align-self:flex-start;">Asset Store · v1.1</span>
+              <span class="tag tag-gold" style="align-self:flex-start;">Asset Store · v1.6</span>
               <h3>Pinwheel Compose &amp; Thread</h3>
-              <p>Includes <strong>Doc 1: Beginner's Tutorial</strong> (Compose, Motion, Thread) and <strong>Doc 2: 5-Stage UI Production Workflow</strong>.</p>
+              <p>Includes <strong>Doc 1: Beginner's Tutorial</strong> (Compose, Motion, Localization, Thread) and <strong>Doc 2: 6-Stage UI Production Workflow</strong>.</p>
             </a>
             <a href="#dreamsky-docs" class="asset-dir-card">
               <span class="tag tag-blue" style="align-self:flex-start;">Open Source · MIT</span>
@@ -134,7 +140,7 @@
           <!-- INTERACTIVE ASSET FILTER -->
           <div class="asset-filter-bar" role="group" aria-label="Filter Documentation by Asset">
             <button type="button" class="filter-btn active" data-filter="all">Show All Assets</button>
-            <button type="button" class="filter-btn" data-filter="suite">Pinwheel Compose &amp; Thread</button>
+            <button type="button" class="filter-btn" data-filter="suite">Pinwheel Compose &amp; Thread (v1.6)</button>
             <button type="button" class="filter-btn" data-filter="dreamsky">Pinwheel DreamSky</button>
             <button type="button" class="filter-btn" data-filter="meshlod">Unity MeshLOD Studio</button>
             <button type="button" class="filter-btn" data-filter="rescaler">Unity URP World Rescaler</button>
@@ -146,24 +152,28 @@
              ================================================================ -->
         <div id="suite-tutorial" class="doc-group-banner" data-asset="suite">
           <div class="doc-group-meta">
-            <span class="tag tag-gold">Asset: Pinwheel Compose &amp; Pinwheel Thread (v1.1)</span>
+            <span class="tag tag-gold">Asset: Pinwheel Compose &amp; Pinwheel Thread (v1.6)</span>
             <span class="tag">Document 1 of 2 · Beginner's Tutorial</span>
             <span class="tag">Unity 6.0 / 6.3+</span>
           </div>
           <h2>Pinwheel Compose &amp; Pinwheel Thread — Complete Beginner's Tutorial</h2>
-          <p>Covers Pinwheel Compose (Package 1), Pinwheel Motion (included in Compose), and Pinwheel Thread (Package 2). Assumes zero prior Unity UI experience.</p>
+          <p>Covers Pinwheel Compose (Package 1), Pinwheel Motion &amp; Pinwheel Localization (included in Compose), and Pinwheel Thread (Package 2). Assumes zero prior Unity UI experience.</p>
         </div>
 
         <!-- CHAPTER 1 -->
         <section id="ch1" class="docs-chapter" data-asset="suite">
           <div class="chapter-top-meta">
-            <span class="tag tag-gold">Applies to: Pinwheel Compose, Motion &amp; Thread</span>
+            <span class="tag tag-gold">Applies to: Compose, Motion, Localization &amp; Thread</span>
             <span class="tag">Chapter 1</span>
           </div>
-          <h2>What Pinwheel Compose, Motion &amp; Thread Do</h2>
+          <h2>What Pinwheel Compose, Motion, Localization &amp; Thread Do</h2>
           <p>
-            Think of building game menus like building a room: one tool builds the walls, one brings them to life, and one wires the light switches. The Pinwheel Studios UI Suite packages three pillars into two independent Unity packages:
+            Think of building game menus like building a room: Compose builds the walls, Motion brings them to life, Localization translates every sign, and Thread wires the switches and memory.
           </p>
+          <div class="callout">
+            <strong>What's New in v1.6</strong>
+            1-click Menu Presets (Pause, Confirm Popup, Game Over, Credits), Nested Sub-Panels inside any screen, a Canva-style Block Composer for custom panels, flattened Pinwheel Motion Inspectors with live Edit-Mode Previews, a 2-tab Pinwheel Localization Manager (AI copy/paste + Anti-□□□ Font Check), and Pinwheel Thread's silent automatic PlayerPrefs memory with zero Save buttons.
+          </div>
           <div class="doc-table-wrap">
             <table class="doc-table">
               <thead>
@@ -172,20 +182,26 @@
               <tbody>
                 <tr>
                   <td>Pinwheel Compose<br /><span class="mono" style="font-size:0.72rem;color:var(--ink-dim);">Package 1</span></td>
-                  <td>Screen Builder &amp; Themer</td>
-                  <td>Builds Main Menus, Settings, Language popups, and Lobby screens in one click. Edit text, icons, colors, and fonts live, and export <span class="inline-code">.pwui</span> files for teammates.</td>
+                  <td>Screen &amp; Block Designer</td>
+                  <td>Builds Main Menus, Pause, Settings, Language, Lobby, Confirm Popups, Nested Sub-Panels, and Canva-style Custom Block Panels in 1 click. Exports tiny <span class="inline-code">.pwui</span> files for teammates.</td>
                   <td class="mono">Tools → Pinwheel Studios → Pinwheel Compose</td>
                 </tr>
                 <tr>
                   <td>Pinwheel Motion<br /><span class="mono" style="font-size:0.72rem;color:var(--ink-dim);">Included in Compose</span></td>
                   <td>UI Animation Components</td>
-                  <td>Two Inspector components (Button Feel &amp; Panel Intro) adding hover/click feedback and OnEnable title/card reveals with zero Animator controllers and zero code.</td>
+                  <td>Two clean Inspectors (Button Feel &amp; Panel Intro) with 1-click Feel Recipes, per-character Text FX, hover accents, and live Edit-Mode previews—zero Animator controllers.</td>
                   <td class="mono">Add Component → Pinwheel Studios → Pinwheel Motion</td>
                 </tr>
                 <tr>
+                  <td>Pinwheel Localization<br /><span class="mono" style="font-size:0.72rem;color:var(--ink-dim);">Included in Compose</span></td>
+                  <td>Multi-Language Manager</td>
+                  <td>2-tab multi-language manager (6 starter languages: EN, PT, ZH-CN, JA, RU, ES) with 1-click Auto-Localize, AI Copy/Paste bridge, Anti-□□□ TMP Font check, and safe Edit-Mode preview.</td>
+                  <td class="mono">Tools → Pinwheel Studios → Pinwheel Localization</td>
+                </tr>
+                <tr>
                   <td>Pinwheel Thread<br /><span class="mono" style="font-size:0.72rem;color:var(--ink-dim);">Package 2</span></td>
-                  <td>Visual Flow Router</td>
-                  <td>A rename-proof visual node grid where you drag Buttons and Menus from your Hierarchy, draw wires, check the live Health Badge, and auto-generate one clean C# router script.</td>
+                  <td>Visual Flow &amp; Prefs Router</td>
+                  <td>Rename-proof, scene-safe visual node grid that wires buttons, Escape keys, menu history, and silent automatic PlayerPrefs memory into ONE clean C# router script.</td>
                   <td class="mono">Tools → Pinwheel Studios → Pinwheel Thread</td>
                 </tr>
               </tbody>
@@ -193,7 +209,7 @@
           </div>
           <div class="callout">
             <strong>Standalone Assembly Definitions (.asmdef)</strong>
-            Pinwheel Compose and Pinwheel Thread ship with separate <span class="inline-code">.asmdef</span> files. You can install Compose alone, Thread alone, or both together with zero compile errors. All Pinwheel Motion animations are zero-GC procedural C#, and Thread compiles to one C# router script without Inspector OnClick lists.
+            Pinwheel Compose and Pinwheel Thread use separate <span class="inline-code">.asmdef</span> files, so you can install Compose alone, Thread alone, or both together with zero compile errors. All animations are zero-GC procedural C#, Localization uses zero-GC cached dictionaries, and Thread compiles into one clean C# script with zero messy Inspector OnClick lists.
           </div>
         </section>
 
@@ -210,20 +226,21 @@
                 <tr><th>Requirement</th><th>Supported Versions / Details</th></tr>
               </thead>
               <tbody>
-                <tr><td>Unity Version</td><td>Unity 6.0 LTS &amp; Unity 6.3+ (tested with <span class="inline-code">FindFirstObjectByType</span> and <span class="inline-code">TextWrappingModes</span>).</td></tr>
-                <tr><td>Render Pipelines</td><td>Built-in Render Pipeline, URP, and HDRP (pipeline-agnostic Legacy <span class="inline-code">UnityEngine.UI</span> + TextMeshPro).</td></tr>
-                <tr><td>Input Handling</td><td>Unity Input System (zero-Update callback) and Legacy Input Manager (automatic <span class="inline-code">#else</span> fallback for Escape Key).</td></tr>
+                <tr><td>Unity Version</td><td>Unity 6.0 LTS &amp; Unity 6.3+ (built with Unity 6 APIs like <span class="inline-code">FindFirstObjectByType</span> and <span class="inline-code">TextWrappingModes</span>).</td></tr>
+                <tr><td>Render Pipelines</td><td>Built-in Render Pipeline, URP, and HDRP (100% pipeline-agnostic Legacy <span class="inline-code">UnityEngine.UI</span> + TextMeshPro).</td></tr>
+                <tr><td>Input Handling</td><td>Unity New Input System (zero-Update callback) and Legacy Input Manager (automatic <span class="inline-code">#else</span> fallback for Escape Key).</td></tr>
                 <tr><td>Resolutions &amp; Aspects</td><td>16:9 (1920×1080), 21:9 Ultrawide, 16:10 (Steam Deck), and 4:3 via Scale With Screen Size CanvasScaler.</td></tr>
-                <tr><td>Pause Menu Safety</td><td>All Pinwheel Motion animations use <span class="inline-code">Time.unscaledDeltaTime</span> so UI stays smooth at <span class="inline-code">Time.timeScale = 0</span>.</td></tr>
+                <tr><td>Pause Menu Safety</td><td>All Pinwheel Motion animations default to <span class="inline-code">Time.unscaledDeltaTime</span> so UI animates smoothly at <span class="inline-code">Time.timeScale = 0</span>.</td></tr>
+                <tr><td>Multi-Scene Safety</td><td>Compose, Motion, Localization, and Thread automatically handle scene switches, scene saves, and Prefab Mode cleanly.</td></tr>
               </tbody>
             </table>
           </div>
           <h3>4-Step First-Time Setup</h3>
           <ol>
-            <li><strong>Import Package(s):</strong> Double-click <span class="inline-code">Pinwheel_Compose_v1.1.unitypackage</span> and/or <span class="inline-code">Pinwheel_Thread_v1.1.unitypackage</span> (or use <span class="inline-code">Assets → Import Package → Custom Package</span>).</li>
-            <li><strong>Import TextMeshPro Essentials:</strong> In a new project, run <span class="inline-code">Window → TextMeshPro → Import TMP Essential Resources</span>. Without this, text labels may appear blank.</li>
-            <li><strong>Verify Top Menu Bar:</strong> Wait 2 seconds for <span class="inline-code">.asmdef</span> compilation and confirm <span class="inline-code">Tools → Pinwheel Studios</span> lists Pinwheel Compose and Pinwheel Thread.</li>
-            <li><strong>Set Game View to 16:9:</strong> Select 16:9 (or 1920×1080) in Game View. Compose creates a Canvas and EventSystem automatically when you spawn your first screen.</li>
+            <li><strong>Import Package(s):</strong> Double-click <span class="inline-code">Pinwheel_Compose_v1.6.unitypackage</span> and/or <span class="inline-code">Pinwheel_Thread_v1.6.unitypackage</span> (or <span class="inline-code">Assets → Import Package → Custom Package</span>) and click Import.</li>
+            <li><strong>Import TextMeshPro Essentials:</strong> In a fresh project, run <span class="inline-code">Window → TextMeshPro → Import TMP Essential Resources</span>. Without this, text labels may appear blank.</li>
+            <li><strong>Verify Top Menu Bar:</strong> Wait 2 seconds for compilation. Under <span class="inline-code">Tools → Pinwheel Studios</span> you will see Pinwheel Compose, Pinwheel Localization, and Pinwheel Thread.</li>
+            <li><strong>Set Game View to 16:9:</strong> Set Game View to 16:9 (or 1920×1080) and dock Pinwheel Compose beside it. Compose creates a Canvas and EventSystem automatically when spawning your first screen.</li>
           </ol>
         </section>
 
@@ -233,20 +250,30 @@
             <span class="tag tag-gold">Applies to: Pinwheel Compose (Package 1)</span>
             <span class="tag">Chapter 3</span>
           </div>
-          <h2>Building Main Menu, Settings, Language &amp; Lobby Screens</h2>
+          <h2>Building Menus, Nested Sub-Panels &amp; Custom Block Panels</h2>
           <ol>
-            <li>Open <span class="inline-code">Tools → Pinwheel Studios → Pinwheel Compose</span> and dock it next to Game View.</li>
-            <li>Under <strong>CREATE STANDALONE SCREEN</strong>, click <strong>Main Menu</strong> to generate a 1920×1080 Canvas with PLAY, HOST LOBBY, JOIN LOBBY, SETTINGS, QUIT, and a watermark.</li>
-            <li>Click <strong>Settings</strong> for a 4-category Settings screen (VIDEO, AUDIO, CONTROLS, ACCESSIBILITY) with a single ScrollView and BACK | APPLY | RESET footer.</li>
-            <li>Use <strong>Solo</strong> (green button in SCENE SCREENS) to isolate one screen in Game View so menus never overlap while editing.</li>
-            <li>Click <strong>Icon Submenu</strong> to spawn a centered Language popup (English, Español, Français, 日本語) with flag icon slots and an active gold indicator dot.</li>
+            <li>Open <span class="inline-code">Tools → Pinwheel Studios → Pinwheel Compose</span>. The single top toolbar holds Theme, Edit, Apply Theme, <span class="inline-code">Transfer ▾</span>, Show All, and Refresh.</li>
+            <li>Under <strong>ADD MENU PRESET</strong> (bottom-left), click <strong>Main Menu</strong>, <strong>Pause Menu</strong>, <strong>Settings</strong>, <strong>Language</strong>, <strong>Create Lobby</strong>, or <strong>Custom Panel</strong>. Click <strong>+ More Menu Presets ▾</strong> for Lobby Room, Confirm &amp; Quit Popup, Game Over Screen, Focused Settings (Audio / Controls / Video), Icon Submenus, Credits Screen, or a Blank Empty Custom Panel.</li>
+            <li><strong>Auto-Solo Preview:</strong> Enabled by default at the top of the sidebar. Clicking any screen selects it and hides sibling screens so Game View stays clean.</li>
+            <li><strong>Edit-First Inspectors:</strong> Edit labels in any casing (no forced ALL-CAPS), click <strong>Dup</strong> to clone rows/buttons, reorder with ▲/▼, remove with ✕, and undo freely with <span class="inline-code">Ctrl+Z</span>.</li>
           </ol>
-          <h3>Live Editing (With Full Ctrl+Z Undo)</h3>
+          <h3>Screen-by-Screen Highlights</h3>
           <ul>
-            <li><strong>Main Menu:</strong> Switch between Left-Anchored and Centered Card, assign a Game Logo Sprite, restyle buttons (Primary / Secondary / Danger), or reorder with ▲/▼.</li>
-            <li><strong>Settings Menu:</strong> Edit Top Category Tabs, add <span class="inline-code">&lt; Stepper &gt;</span>, Slider, Toggle, Keybind, or Submenu ▸ rows, and toggle 24×24 Left Icons.</li>
-            <li><strong>Icon Submenus:</strong> Toggle live between 1-Column Icon List and 2-Column Icon Grid.</li>
-            <li><strong>Create Lobby &amp; Lobby Room:</strong> Multiplayer screens with Room Code bars, TMP_InputFields, Max Players steppers, Player Roster rows, and a toggleable Side Loadout Panel.</li>
+            <li><strong>Main Menu &amp; Pause Menu:</strong> Edit, style (Primary / Secondary / Danger), duplicate, or add buttons at the top. Flip between Left-Anchored and Centered Card, assign a Game Logo Sprite, or edit the Studio Watermark.</li>
+            <li><strong>Settings Menu (Game-Ready Defaults):</strong> Spawns with realistic rows (Quality, Fullscreen, V-Sync, Brightness, Master Volume, Mouse Sensitivity, etc.) and a clean <strong>BACK | RESET</strong> footer designed for Thread's automatic PlayerPrefs saving. Added or renamed sections? Open Top Category Tabs and click <strong>Sync to Sections</strong> in 1 click.</li>
+            <li><strong>Icon Submenus (Language, Difficulty, Maps):</strong> Language spawns prefilled with all 6 Pinwheel languages (English, Português, 简体中文, 日本語, Русский, Español). Switch live between 1-Column Icon List and 2-Column Icon Grid, assign flag sprites, and click the single-active <strong>● Active</strong> pill.</li>
+          </ul>
+          <h3>Nested Sub-Panels Inside Any Screen (New in v1.6)</h3>
+          <ol>
+            <li>Select any parent screen (such as Settings) in the left sidebar.</li>
+            <li>Scroll to <strong>Nested Sub-Panels</strong> on the right pane and click <strong>+ Add Sub-Panel ▾</strong> (Keybinds List Sub-Panel, Mini Options List, Icon Picker, Confirm Popup, or Custom Block Panel).</li>
+            <li>The sub-panel appears indented (<span class="inline-code">↳ Keybinds</span>) under its parent. Clicking it keeps the parent screen visible behind it so you design the true layered overlay while isolating its controls.</li>
+          </ol>
+          <h3>Canva-Style Block Composer for Custom Panels (New in v1.6)</h3>
+          <ul>
+            <li><strong>Stack Modular Blocks:</strong> Under <strong>ADD BLOCK</strong>, click <span class="inline-code">+ Heading</span>, <span class="inline-code">+ Text</span>, <span class="inline-code">+ Image</span>, <span class="inline-code">+ Button</span>, <span class="inline-code">+ 2-Btn Row</span>, <span class="inline-code">+ Option Row ▾</span> (Keybind, Slider, Toggle, Stepper, Input, Submenu Trigger), <span class="inline-code">+ Divider</span>, or <span class="inline-code">+ Spacer</span>.</li>
+            <li><strong>Quick Size &amp; Card Style:</strong> 1-click card sizes (Compact, Medium, Wide, Tall), live Block Spacing slider, and Show Header / Show Footer toggles.</li>
+            <li><strong>Inline Block Tweaks:</strong> Click ⚙ on any block to adjust font size, Left/Center/Right alignment, image height, or button styles—automatically synced to your active <span class="inline-code">PWUI_Theme</span>.</li>
           </ul>
         </section>
 
@@ -258,13 +285,13 @@
           </div>
           <h2>Themes, Fonts &amp; Bringing Your Own Custom UI</h2>
           <p>
-            Click <strong>Edit Theme</strong> in Compose's top bar to open your saved <span class="inline-code">PWUI_Theme</span> ScriptableObject. Choose a preset (<strong>Dark Fantasy</strong>, <strong>Blood &amp; Iron</strong>, <strong>Modern Slate</strong>, or <strong>Horror Minimal</strong>), assign your TextMeshPro Primary/Header fonts and 9-slice sprites, and click <strong>APPLY THEME TO ALL SCENE SCREENS</strong>.
+            Click <strong>Edit</strong> next to Theme in Compose's top bar to inspect your saved <span class="inline-code">PWUI_Theme</span> ScriptableObject. Pick a preset (<strong>Dark Fantasy</strong>, <strong>Blood &amp; Iron</strong>, <strong>Modern Slate</strong>, or <strong>Horror Minimal</strong>), assign your TMP Primary Font, optional Header Font, and custom 9-slice sprites, then click <strong>Apply Theme</strong> to update every unlocked screen, block, and control instantly.
           </p>
-          <h3>3 Ways to Mix Custom Art &amp; Panels</h3>
+          <h3>3 Ways to Mix Your Own Custom UI</h3>
           <ul>
-            <li><strong>1. Drop Into a Custom Slot:</strong> Create Lobby, Lobby Room, and Custom Panel include Custom Slots (+ Add Slot). Drop in any UI prefab and click Insert Prefab.</li>
-            <li><strong>2. Register Any Hand-Built Panel:</strong> Select your custom panel in the Hierarchy and click <strong>+ Register Selected UI Panel</strong>. It receives Solo Preview with <span class="inline-code">Lock Theme Sync = ON</span> by default.</li>
-            <li><strong>3. Theme Prefab Overrides:</strong> In <span class="inline-code">PWUI_Theme</span> Section 5, assign custom Button or Player Row prefabs so newly generated menus spawn your own prefabs automatically.</li>
+            <li><strong>1. Custom Prefab Slots:</strong> Expand Custom Prefab Slots on any screen, click <span class="inline-code">+ Slot</span>, drag your Unity UI prefab into Prefab to Insert, and click Insert—with full Undo support.</li>
+            <li><strong>2. Register Any Hand-Built Panel:</strong> Expand Custom Canvas / Register at the bottom-left of Compose, select your hand-built UI panel in the Hierarchy, and click <strong>+ Register Selected UI Panel</strong>. It gains Solo Preview immediately with <span class="inline-code">Lock Theme Sync = ON</span>.</li>
+            <li><strong>3. Auto-Tag Hand-Built Children:</strong> On a Custom Panel, expand Bring-Your-Own UI Tools and click <strong>Auto-Tag Untagged Child UI for Theme Sync</strong> to opt custom Buttons, Inputs, and Texts into your Theme.</li>
           </ul>
         </section>
 
@@ -274,71 +301,54 @@
             <span class="tag tag-purple">Applies to: Pinwheel Motion (Included in Compose)</span>
             <span class="tag">Chapter 5</span>
           </div>
-          <h2>Adding Smooth Button &amp; OnEnable Animations</h2>
+          <h2>Tactile Hover Juice, Text FX &amp; Edit-Mode Previews</h2>
           <p>
-            Add <span class="inline-code">PWUI_ButtonFeel</span> or <span class="inline-code">PWUI_PanelIntro</span> to any Unity UI object (built with Compose or by hand). Both run on unscaled time and reset cleanly on <span class="inline-code">OnDisable()</span>.
+            In v1.6, both Pinwheel Motion Inspectors (<span class="inline-code">PWUI_ButtonFeel</span> and <span class="inline-code">PWUI_PanelIntro</span>) use a flat at-a-glance layout with 1-Click Feel Recipes and core dropdowns at the top, while spring curves, audio clips, child cascades, and overrides stay in clean foldouts.
           </p>
-          <h3>Part A: Button Feel Presets (<span class="inline-code">PWUI_ButtonFeel</span>)</h3>
-          <div class="doc-table-wrap">
-            <table class="doc-table">
-              <thead><tr><th>Preset</th><th>Behavior</th><th>Best Used For</th></tr></thead>
-              <tbody>
-                <tr><td>Crisp Pop</td><td>1.04× scale-up on hover with a 0.95× click squish.</td><td>General UI buttons.</td></tr>
-                <tr><td>Heavy Forge</td><td>Firm hover lock-in with a weighty downward dip on click.</td><td>Dark fantasy, medieval, and tactile UI.</td></tr>
-                <tr><td>Slide Nudge</td><td>Glides right (+9px) on hover; firms back on click.</td><td>Left-anchored Main Menu button stacks.</td></tr>
-                <tr><td>Spring Bounce</td><td>Underdamped spring overshoot on hover and release.</td><td>Party games, arcade UI, and reward buttons.</td></tr>
-                <tr><td>Subtle Tilt</td><td>Micro-rotation (+1.8°) and lift on hover; straightens on click.</td><td>Stylized or handcrafted cards and buttons.</td></tr>
-                <tr><td>Dread Flicker</td><td>Brief unsettling alpha micro-flicker on hover; stark click snap.</td><td>Psychological horror and minimal UI.</td></tr>
-              </tbody>
-            </table>
-          </div>
+          <h3>Part A: Button Hover &amp; Click Juice (<span class="inline-code">PWUI_ButtonFeel</span>)</h3>
+          <ol>
+            <li>Select one or multiple Buttons → <span class="inline-code">Add Component → Pinwheel Studios → Pinwheel Motion → Button Feel</span>.</li>
+            <li><strong>Pick a 1-Click Feel Recipe:</strong> Click <strong>Obsidian</strong>, <strong>Gothic</strong>, <strong>Velvet</strong>, <strong>Arcane</strong>, or <strong>Minimal</strong> to pair matching Spring Motion, per-character Text FX, and Hover Accent automatically.</li>
+            <li><strong>Customize &amp; Preview in Edit Mode:</strong> Adjust Motion Preset, Intensity, Text FX (Gold Shimmer, Wave Ripple, Tracking Expand, Parallax Slide, Type Pop, Horror Tremble, Glitch Slice), or Hover Accent (Left Edge Bar, Bottom Line, Diagonal Sheen). Click <strong>▶ Preview Hover</strong> or <strong>▶ Preview Click</strong> right in Edit Mode without entering Play Mode.</li>
+            <li><strong>Optional Tuning &amp; SFX:</strong> Expand <strong>Spring Tuning</strong> for the live 2nd-order spring curve (Snappiness &amp; Bounce) or <strong>Audio Feedback</strong> for pitched hover/click AudioClips.</li>
+          </ol>
 
-          <h3>Part B: OnEnable Panel Intro Presets (<span class="inline-code">PWUI_PanelIntro</span>)</h3>
-          <div class="doc-table-wrap">
-            <table class="doc-table">
-              <thead><tr><th>Preset</th><th>Effect on Enable</th><th>Best Used For</th></tr></thead>
-              <tbody>
-                <tr><td>Slide Up + Fade</td><td>Rises softly from below while fading in.</td><td>Settings cards, Lobby rooms, standard panels.</td></tr>
-                <tr><td>Fade In</td><td>Clean CanvasGroup alpha dissolve (0 → 1).</td><td>Dark backdrops, overlays, minimal UI.</td></tr>
-                <tr><td>Slide From Left</td><td>Glides in from the left edge + fade.</td><td>Left-anchored Main Menus and sidebars.</td></tr>
-                <tr><td>Slide From Right</td><td>Glides in from the right edge + fade.</td><td>Right-hand Loadout/Class panels &amp; alerts.</td></tr>
-                <tr><td>Scale Pop</td><td>0.90× → 1.0× pop with gentle ease-out overshoot.</td><td>Language popups and confirmation dialogs.</td></tr>
-                <tr><td>Heavy Slam</td><td>Drops firmly from 1.13× down to 1.0× + fade.</td><td>Bold dark-fantasy banners and match headers.</td></tr>
-                <tr><td>Title Drop</td><td>Settles downward from above + fade.</td><td>Game logos and top card headers.</td></tr>
-                <tr><td>Cinematic Tracking</td><td>Tightens TMP letter-spacing while fading in.</td><td>Large TextMeshPro game titles.</td></tr>
-              </tbody>
-            </table>
-          </div>
+          <h3>Part B: OnEnable Panel, Title &amp; Popup Reveals (<span class="inline-code">PWUI_PanelIntro</span>)</h3>
+          <ol>
+            <li>Select any Title, Logo, Card, or Popup → <span class="inline-code">Add Component → Pinwheel Studios → Pinwheel Motion → Panel Intro</span>.</li>
+            <li>Pick an <strong>Enter Preset</strong> (Slide Up + Fade, Fade In, Slide From Left/Right, Scale Pop, Heavy Slam, Title Drop), optional <strong>Title Text FX</strong> (Letter Wave In, Cinematic Tracking, Gold Shimmer Sweep, Gothic Flicker, Letter Drop In, Impact Spread), and optional <strong>Idle Loop</strong>.</li>
+            <li>Click <strong>▶ Preview Enter</strong> or <strong>▶ Preview Exit</strong> in Edit Mode (or <strong>▶ Replay Enter</strong> in Play Mode). Previews automatically restore rest positions before saving or switching scenes.</li>
+          </ol>
+
           <div class="callout">
-            <strong>1-Click Cascading Buttons (Auto-Stagger Children)</strong>
-            Select your <span class="inline-code">Menu_Buttons</span> container → Add Panel Intro → check <strong>Auto-Stagger Children</strong> → click <strong>Apply to All Direct Children</strong>. Click the green <strong>▶ REPLAY INTRO NOW</strong> button in Play Mode to preview timing live.
+            <strong>Smart Child Cascade (Auto-Stagger)</strong>
+            Select a Buttons container → add Panel Intro → expand <strong>Child Cascade (Auto-Stagger)</strong> → check <strong>Auto-Stagger Children</strong> → click <strong>Apply Panel Motion to Content Children</strong>. v1.6 automatically skips purely decorative dividers, backdrops, and spacers so only real content animates.
           </div>
         </section>
 
         <!-- CHAPTER 6 -->
         <section id="ch6" class="docs-chapter" data-asset="suite">
           <div class="chapter-top-meta">
-            <span class="tag tag-green">Applies to: Pinwheel Thread (Package 2)</span>
-            <span class="tag">Chapter 6</span>
+            <span class="tag tag-teal">Applies to: Pinwheel Localization (Included in Compose)</span>
+            <span class="tag">Chapter 6 · New in v1.6</span>
           </div>
-          <h2>Wiring Buttons to Menus on the Node Grid</h2>
+          <h2>Translating Your Game in 3 Steps (Pinwheel Localization)</h2>
           <p>
-            Pinwheel Thread flows strictly Left-to-Right: <span class="node-pill pill-purple">Purple: Start Setup</span> → <span class="node-pill pill-blue">Blue: Triggers</span> → <span class="node-pill pill-gold">Gold: Actions</span> → <span class="node-pill pill-green">Green: Targets</span>.
+            Open <span class="inline-code">Tools → Pinwheel Studios → Pinwheel Localization</span>. Click <strong>Create Default Language Table (6 Starter Languages)</strong> to generate <span class="inline-code">PWUI_LanguageTable.asset</span> inside <span class="inline-code">Resources/PinwheelStudios/</span> pre-loaded with English (<span class="inline-code">en</span>), Portuguese (<span class="inline-code">pt</span>), Simplified Chinese (<span class="inline-code">zh-CN</span>), Japanese (<span class="inline-code">ja</span>), Russian (<span class="inline-code">ru</span>), and Spanish (<span class="inline-code">es</span>).
           </p>
+          <h3>The 3-Step Translation Loop (Tab 1: Translate &amp; Scene)</h3>
           <ol>
-            <li>Open <span class="inline-code">Tools → Pinwheel Studios → Pinwheel Thread</span>.</li>
-            <li>Drag <span class="inline-code">MainMenu_Screen</span> from Hierarchy onto the grid as a <strong>Screen Buttons Card (Blue)</strong>.</li>
-            <li>Drag <span class="inline-code">MainMenu_Screen</span> and <span class="inline-code">SettingsMenu_Screen</span> onto the grid as <strong>Menu Targets (Green)</strong>.</li>
-            <li>Add <strong>Lifecycle → Start Disabled (Purple)</strong> and wire <span class="inline-code">Disable On Start → Start Off</span> on SettingsMenu_Screen.</li>
-            <li>Add <strong>Actions → Switch Menu (Gold)</strong>: wire <span class="inline-code">MainMenu_Screen [SETTINGS] → In</span>, <span class="inline-code">Open → SettingsMenu_Screen</span>, and <span class="inline-code">Close → MainMenu_Screen</span>.</li>
-            <li>Wire both <span class="inline-code">Btn_Back</span> and a scoped <strong>Escape / Back Key (Blue)</strong> into the same <strong>Back (Auto-History) (Gold)</strong> node (Multi-Input creates <span class="inline-code">In 2</span> automatically).</li>
-            <li>Add <strong>Refresh Panel (Gold)</strong> wired to SettingsMenu_Screen so sub-panels close, scrollbars reset to top, and intros replay on every visit.</li>
-            <li>Click <strong>Auto-Tidy</strong>, confirm the Health Badge shows <strong>✓ Ready</strong>, and click <strong>COMPILE &amp; CONNECT</strong>.</li>
+            <li><strong>Click '1. Auto-Localize Scene':</strong> Scans every Compose screen in the active scene, automatically skips dynamic numbers/symbols, user input text, and Language Button labels, attaches <span class="inline-code">PWUI_LocalizedText</span>, and registers deduplicated keys.</li>
+            <li><strong>Click '2. Copy AI Prompt (Missing)':</strong> Copies all untranslated keys as a structured prompt ready to paste into any AI chat for button-friendly JSON translations.</li>
+            <li><strong>Click '3. Paste AI Reply':</strong> Paste the AI's JSON reply—Pinwheel Localization strips markdown fences automatically and merges every translation into your table. Prefer spreadsheets? Use <span class="inline-code">CSV ▾</span> in the top bar for Excel-safe UTF-8 BOM Export/Import.</li>
           </ol>
-          <div class="callout">
-            <strong>Wiring Settings Top Tabs (VIDEO | AUDIO | CONTROLS | ACCESSIBILITY)</strong>
-            Drag <span class="inline-code">SettingsMenu_Screen</span> onto the grid as a Screen Buttons Card, create 4 <strong>Scroll To Section (Gold)</strong> nodes pointing to <span class="inline-code">Settings_ScrollView</span> and each section RectTransform, wire each tab port, and click COMPILE &amp; CONNECT.
-          </div>
+          <h3>Fonts, Anti-□□□ Protection &amp; Safe Live Preview (Tab 2: Languages &amp; Fonts)</h3>
+          <ul>
+            <li><strong>Assign Non-Latin TMP Fonts:</strong> Leave Latin languages empty to keep your Theme font. Assign Dynamic SDF TMP fonts (e.g., Noto Sans SC, JP, Cyrillic) to <span class="inline-code">zh-CN</span>, <span class="inline-code">ja</span>, and <span class="inline-code">ru</span>. If a font is Static or missing Multi-Atlas Textures, click the 1-click <strong>Fix Font</strong> button in the warning banner.</li>
+            <li><strong>Wire Language Switcher Buttons:</strong> Add <span class="inline-code">PWUI_LanguageButton</span> to each button in your Language Submenu and pick its Target Language. Click <strong>Sync Language Buttons in Scene</strong> in Tab 2 so each button renders in its native script (e.g., 日本語) with its own font.</li>
+            <li><strong>Safe Edit-Mode Preview:</strong> Use the top-right <strong>Preview</strong> dropdown to inspect Japanese, Russian, or Chinese directly in Scene/Game View. Original text and fonts restore automatically on <span class="inline-code">Ctrl+S</span>, scene switch, or Play Mode.</li>
+            <li><strong>3D World Text &amp; C# Prompts:</strong> Attach <span class="inline-code">PWUI_LocalizedText</span> to any 3D TextMeshPro object, or call <span class="inline-code">PWUI_Locale.Get("PROMPT_PICKUP", itemName)</span> from C#. Player language choice saves automatically to PlayerPrefs.</li>
+          </ul>
         </section>
 
         <!-- CHAPTER 7 -->
@@ -347,60 +357,87 @@
             <span class="tag tag-green">Applies to: Pinwheel Thread (Package 2)</span>
             <span class="tag">Chapter 7</span>
           </div>
-          <h2>Node Cheat Sheet &amp; v1.1 Reliability Features</h2>
-          <div class="doc-table-wrap">
-            <table class="doc-table">
-              <thead><tr><th>Color</th><th>Node Name</th><th>What It Does</th></tr></thead>
-              <tbody>
-                <tr><td><span class="node-pill pill-purple">Purple</span></td><td>Start Disabled</td><td>Disables connected objects in <span class="inline-code">Awake()</span> before frame 1. Plugs only into purple 'Start Off' ports.</td></tr>
-                <tr><td><span class="node-pill pill-blue">Blue</span></td><td>Button Trigger</td><td>Fires when a single Legacy Button is clicked.</td></tr>
-                <tr><td><span class="node-pill pill-blue">Blue</span></td><td>Screen Buttons Card</td><td>Groups all buttons of a menu into one card (skips &lt; / &gt; arrows) and preserves wires on Refresh.</td></tr>
-                <tr><td><span class="node-pill pill-blue">Blue</span></td><td>Escape / Back Key</td><td>Listens to Escape via Unity Input System (or Legacy Input fallback) with optional Active Scope.</td></tr>
-                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Switch Menu</td><td>Opens Next Menu(s) and closes Current Menu(s) with history tracking &amp; AutoParentScreenRoot backdrop handling.</td></tr>
-                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Refresh Panel</td><td>Snapshots default child states in <span class="inline-code">Awake()</span>, restores closed popups, resets scrolls &amp; replays intros.</td></tr>
-                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Toggle / Overlay</td><td>Opens, closes, or toggles a popup without closing the menu behind it.</td></tr>
-                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Back (Auto-History)</td><td>Returns to whichever menu opened the current screen (with optional Fallback).</td></tr>
-                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Scroll To Section</td><td>Jumps a ScrollRect smoothly to a target Section RectTransform.</td></tr>
-                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>UI Sound</td><td>Pass-through: plays an AudioClip via an AudioSource, then triggers 'Then'.</td></tr>
-                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Custom Hook</td><td>Generates a public C# event (and optional UnityEvent) without touching generated code.</td></tr>
-                <tr><td><span class="node-pill pill-green">Green</span></td><td>Menu Target</td><td>Any menu root or panel GameObject, with 'Bind to Parent' button &amp; purple 'Start Off' port.</td></tr>
-                <tr><td><span class="node-pill pill-green">Green</span></td><td>Scene / Quit</td><td>Loads a Unity Scene by name, or quits cleanly (stops Play Mode in Editor).</td></tr>
-              </tbody>
-            </table>
+          <h2>Wiring Menus &amp; Silent Auto PlayerPrefs (Pinwheel Thread)</h2>
+          <p>
+            Pinwheel Thread flows strictly Left-to-Right: <span class="node-pill pill-blue">Blue: Triggers</span> → <span class="node-pill pill-gold">Gold: Actions</span> → <span class="node-pill pill-green">Green: Targets</span>. Every Gold Action node has ONE clean <span class="inline-code">In</span> port accepting unlimited incoming wires.
+          </p>
+          <h3>Step-by-Step: Wire Main Menu ↔ Settings (With Escape &amp; Auto PlayerPrefs)</h3>
+          <ol>
+            <li>Open <span class="inline-code">Tools → Pinwheel Studios → Pinwheel Thread</span>.</li>
+            <li>Drag <span class="inline-code">MainMenu_Screen</span> from Hierarchy onto the grid as a <strong>Screen Buttons Card (Blue)</strong>. Nested sub-panel buttons stay isolated automatically.</li>
+            <li>Drag <span class="inline-code">SettingsMenu_Screen</span> onto the grid as a <strong>Menu Target (Green)</strong>. Select it and check two boxes in the Inspector:
+              <br />• <strong>Start Disabled on Awake</strong> (purple <span class="inline-code">START OFF</span> pill — hides Settings automatically on boot)
+              <br />• <strong>Auto-Remember Controls</strong> (teal <span class="inline-code">PREFS</span> pill — silently saves &amp; restores every Slider, Toggle, and Dropdown inside Settings with zero Save buttons)
+            </li>
+            <li><strong>3-Node Switch Menu:</strong> Add <strong>Switch Menu (Gold)</strong>. Wire <span class="inline-code">MainMenu_Screen [SETTINGS] → Switch Menu [In]</span> and <span class="inline-code">Switch Menu [Open] → SettingsMenu_Screen [In]</span>. Because <strong>Auto-Close Source Screen</strong> is ON by default when Close is unwired, Main Menu closes automatically without dropping it twice.</li>
+            <li><strong>Back Button + Scoped Escape:</strong> Drag Settings' <span class="inline-code">Btn_Back</span> (Blue) and add <strong>Escape / Back Key (Blue)</strong>. Wire BOTH into the exact same <span class="inline-code">In</span> port on <strong>Back (Auto-History) (Gold)</strong>. Pressing Escape on the root Main Menu safely does nothing.</li>
+            <li><strong>Compile &amp; Test:</strong> Click <strong>Auto-Tidy</strong>, confirm green <strong>✓ Ready</strong>, and click <strong>COMPILE &amp; CONNECT</strong>. Test saving/restoring in Play Mode, and use <strong>Clear Saved Prefs (Editor Test)</strong> in Thread's sidebar anytime to reset test data.</li>
+          </ol>
+          <div class="callout">
+            <strong>How Silent Automatic PlayerPrefs Memory Works</strong>
+            Automatically discovers and binds every <span class="inline-code">Slider</span> (float), <span class="inline-code">Toggle</span> (bool), <span class="inline-code">TMP_Dropdown</span> (int), and legacy <span class="inline-code">Dropdown</span> (int) inside any checked panel—plus optional <span class="inline-code">TMP_InputField</span> text if you enable <strong>Also Remember Text Inputs</strong>. Writes in memory while dragging for zero stutter, flushes <span class="inline-code">PlayerPrefs.Save()</span> cleanly on panel leave/disable/pause/quit, restores values in <span class="inline-code">Awake()</span>, and invokes <span class="inline-code">onValueChanged</span> once in <span class="inline-code">Start()</span> so audio and graphics scripts apply saved settings on boot.
           </div>
-          <p style="font-size:0.84rem;">* All Gold Action nodes support Multi-Input: drop additional trigger wires onto the node body to create In 2, In 3, etc.</p>
-          <h3>v1.1 Reliability Protections</h3>
-          <ul>
-            <li><strong>Rename-Proof &amp; Move-Proof (GlobalObjectId):</strong> Tracks both <span class="inline-code">GlobalObjectId</span> and Hierarchy Path to self-heal moved or renamed objects automatically.</li>
-            <li><strong>Duplicate Sibling Protection:</strong> Distinctly tracks same-named siblings (<span class="inline-code">Button[#1]</span> vs <span class="inline-code">Button[#2]</span>).</li>
-            <li><strong>Live Pre-Compile Health Badge:</strong> Click <span class="inline-code">⚠ N Issues ▾</span> to jump to broken nodes or run 1-click Auto-Repair Paths.</li>
-            <li><strong>Prefab Mode Guard &amp; Multi-Scene Support:</strong> Warns if compiling inside isolated Prefab Mode and resolves additively loaded scenes.</li>
-          </ul>
         </section>
 
         <!-- CHAPTER 8 -->
         <section id="ch8" class="docs-chapter" data-asset="suite">
           <div class="chapter-top-meta">
-            <span class="tag tag-gold">Applies to: Pinwheel Compose (.pwui) &amp; Pinwheel Thread (.pwthread)</span>
+            <span class="tag tag-green">Applies to: Pinwheel Thread (Package 2)</span>
             <span class="tag">Chapter 8</span>
           </div>
-          <h2>Sending UI Across Different Unity Projects</h2>
+          <h2>Node Cheat Sheet &amp; v1.6 Scene-Safe Reliability</h2>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead><tr><th>Color</th><th>Node Name</th><th>What It Does</th></tr></thead>
+              <tbody>
+                <tr><td><span class="node-pill pill-blue">Blue</span></td><td>Screen Buttons Card</td><td>Groups all buttons of a menu into one card (skips &lt; / &gt; arrows and isolates nested sub-panels). Supports Start Disabled &amp; Auto-Remember Controls.</td></tr>
+                <tr><td><span class="node-pill pill-blue">Blue</span></td><td>Button Trigger</td><td>Fires when a single UI Button is clicked. Supports Start Disabled.</td></tr>
+                <tr><td><span class="node-pill pill-blue">Blue</span></td><td>Escape / Back Key</td><td>Listens to Escape via New Input System (zero-Update) or Legacy fallback. Scoped Escape triggers always run before Global Escape.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Switch Menu</td><td>Opens target menu(s) and auto-closes the source screen (or explicit Close targets) with Back history tracking.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Toggle / Overlay</td><td>Opens, closes, or toggles an overlay or nested sub-panel without closing the screen behind it.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Back (Auto-History)</td><td>Safely pops the previous menu from history (with optional Fallback). Never disables the root screen if history is empty.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Refresh Panel</td><td>Snapshots child active states on <span class="inline-code">Awake()</span>, restores closed sub-panels, resets ScrollViews to top, and replays Panel Intros.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Scroll To Section</td><td>Jumps a ScrollRect smoothly to a target Section RectTransform (ideal for Settings top tabs).</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>UI Sound</td><td>Pass-through: plays an AudioClip via an AudioSource, then triggers Then.</td></tr>
+                <tr><td><span class="node-pill pill-gold">Gold*</span></td><td>Custom Hook</td><td>Generates a public C# <span class="inline-code">event Action</span> (and optional UnityEvent) without hand-editing generated code.</td></tr>
+                <tr><td><span class="node-pill pill-green">Green</span></td><td>Menu / Panel Target</td><td>Exact GameObject controlled by actions (no hidden parent-jumping). Includes 1-click Snap to Screen Root, Start Disabled, and Auto-Remember Controls.</td></tr>
+                <tr><td><span class="node-pill pill-green">Green</span></td><td>Scene / Quit</td><td>Flushes dirty PlayerPrefs, then loads a Unity Scene by name or quits cleanly (stops Play Mode in Editor).</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:0.84rem;">* Every Gold Action node accepts unlimited incoming wires on its single <span class="inline-code">In</span> port. Legacy StartDisabled nodes from v1.1 auto-migrate into the <strong>Start Disabled on Awake</strong> checkbox automatically.</p>
+          <h3>v1.6 Scene-Safe Reliability Protections</h3>
           <ul>
-            <li><strong>Export Menus (.pwui — Pinwheel Compose):</strong> Click <strong>Export .pwui</strong> (5–15 KB file), <strong>Copy</strong> (clipboard text), or <strong>Export Bundle</strong>. Your teammate imports or pastes inside their active scene and gets live-editable UI immediately.</li>
-            <li><strong>GUID-Free Safety:</strong> <span class="inline-code">.pwui</span> files store Font and Sprite names instead of raw project GUIDs. Keep <strong>Import Uses Active Theme = ON</strong> to adopt the receiving project's fonts, sprites, and colors.</li>
-            <li><strong>Export Flows (.pwthread — Pinwheel Thread):</strong> Click <span class="inline-code">Share ▾ → Export Graph (.pwthread)</span>. Local GlobalObjectIds are stripped automatically so your teammate imports the graph and clicks <strong>COMPILE &amp; CONNECT</strong>.</li>
+            <li><strong>Scene-Switch Safe (Other Scene Badge):</strong> Switching to a Gameplay scene while Thread is open shows a calm blue <strong>Other Scene</strong> badge and preserves all graph references untouched instead of false red errors.</li>
+            <li><strong>Rename-Proof &amp; Move-Proof (GlobalObjectId):</strong> Tracks both <span class="inline-code">GlobalObjectId</span> and Hierarchy Path (with <span class="inline-code">[#1]/[#2]</span> duplicate-sibling protection) to self-heal moved or renamed objects automatically.</li>
+            <li><strong>Exact Target Predictability:</strong> Action nodes always toggle the exact GameObject bound on the node—no accidental parent-jumping on nested popups. Click <strong>Snap to Screen Root</strong> when you want the outer screen root.</li>
+            <li><strong>Live Health Badge &amp; Prefab Mode Guard:</strong> Green <strong>✓ Ready</strong> confirms every reference is valid; <span class="inline-code">⚠ Issues ▾</span> jumps directly to broken nodes. Compiling inside Prefab Mode is safely blocked.</li>
           </ul>
         </section>
 
         <!-- CHAPTER 9 -->
         <section id="ch9" class="docs-chapter" data-asset="suite">
           <div class="chapter-top-meta">
-            <span class="tag tag-green">Applies to: Pinwheel Thread (Package 2)</span>
+            <span class="tag tag-gold">Applies to: Pinwheel Compose (.pwui) &amp; Pinwheel Thread (.pwthread)</span>
             <span class="tag">Chapter 9</span>
+          </div>
+          <h2>Sharing UI Across Different Unity Projects (.pwui &amp; .pwthread)</h2>
+          <ol>
+            <li><strong>Export From Pinwheel Compose:</strong> Click <span class="inline-code">More ▾ → Export Screen (.pwui)</span> or Copy Blueprint on a single screen—or click <span class="inline-code">Transfer ▾</span> in Compose's top bar to export/copy all screens in the scene.</li>
+            <li><strong>Import Into Another Unity Project:</strong> Your teammate clicks <span class="inline-code">Transfer ▾ → Import .pwui File</span> or Paste Blueprint. With <strong>Reskin Imported Screens to Active Theme</strong> checked (default), incoming menus automatically adopt their project's fonts, sprites, and colors with zero missing references.</li>
+            <li><strong>Share Node Flows (.pwthread):</strong> In Pinwheel Thread, click <span class="inline-code">Share ▾ → Export Graph (.pwthread)</span> or Copy Graph to Clipboard. Local GlobalObjectIds are stripped automatically so your teammate resolves clean paths and clicks <strong>COMPILE &amp; CONNECT</strong>.</li>
+          </ol>
+        </section>
+
+        <!-- CHAPTER 10 -->
+        <section id="ch10" class="docs-chapter" data-asset="suite">
+          <div class="chapter-top-meta">
+            <span class="tag tag-green">Applies to: Pinwheel Thread (Package 2)</span>
+            <span class="tag">Chapter 10</span>
           </div>
           <h2>Connecting Gameplay &amp; PurrNet Code (Custom Hook)</h2>
           <p>
-            Never hand-edit <span class="inline-code">PinwheelThread_UIFlow.cs</span> because re-compiling overwrites it. Add a <strong>Custom Hook (Gold)</strong> node, set its C# Event Name (e.g., <span class="inline-code">OnCreateLobbyClicked</span>), compile, and subscribe from your own script:
+            Never hand-edit <span class="inline-code">PinwheelThread_UIFlow.cs</span> because re-compiling overwrites it. Add a <strong>Custom Hook (Gold)</strong> node, set its C# Event Name (e.g., <span class="inline-code">OnCreateLobbyClicked</span>), click <strong>COMPILE &amp; CONNECT</strong>, and subscribe cleanly from your own script:
           </p>
           <div class="code-block">
             <div class="code-head">
@@ -434,109 +471,121 @@ public class LobbyNetworkBridge : MonoBehaviour
           </div>
         </section>
 
-        <!-- CHAPTER 10 -->
-        <section id="ch10" class="docs-chapter" data-asset="suite">
+        <!-- CHAPTER 11 -->
+        <section id="ch11" class="docs-chapter" data-asset="suite">
           <div class="chapter-top-meta">
-            <span class="tag tag-gold">Applies to: Pinwheel Compose, Motion &amp; Thread</span>
-            <span class="tag">Chapter 10</span>
+            <span class="tag tag-gold">Applies to: Compose, Motion, Localization &amp; Thread</span>
+            <span class="tag">Chapter 11</span>
           </div>
-          <h2>Troubleshooting: 8 Common Issues</h2>
+          <h2>Troubleshooting: Quick Fixes for Common Issues</h2>
           <div class="doc-table-wrap">
             <table class="doc-table">
               <thead><tr><th>Problem</th><th>Asset</th><th>Fix</th></tr></thead>
               <tbody>
-                <tr><td>Toolbar shows '⚠ Issues ▾' or red '!' border</td><td>Pinwheel Thread</td><td>Click the badge → jump to the node → re-assign the object/scene name and click COMPILE &amp; CONNECT.</td></tr>
-                <tr><td>'Exit Prefab Mode First' popup on compile</td><td>Pinwheel Thread</td><td>Click the Hierarchy back arrow to exit Prefab Mode back to your Scene, then compile.</td></tr>
-                <tr><td>Dark background stays on screen when switching</td><td>Pinwheel Thread</td><td>Set Switch Menu Target Scope to <span class="inline-code">AutoParentScreenRoot</span> (or click 'Bind to Parent') and re-compile.</td></tr>
-                <tr><td>Buttons don't do anything in Play Mode</td><td>Pinwheel Thread</td><td>Confirm <span class="inline-code">PinwheelThread_Router</span> is Active with zero <span class="inline-code">(None)</span> fields and an EventSystem exists.</td></tr>
-                <tr><td>New Compose button missing on Thread Card</td><td>Compose + Thread</td><td>Select the blue Screen Buttons Card in Thread and click <strong>Refresh Child Buttons</strong>. Existing wires stay intact.</td></tr>
-                <tr><td>Sub-panel stays stuck open on menu reopen</td><td>Pinwheel Thread</td><td>Add a <strong>Refresh Panel (Gold)</strong> node wired to that menu and trigger it on open.</td></tr>
-                <tr><td>Cinematic Tracking looks like normal Fade In</td><td>Pinwheel Motion</td><td>Attach Panel Intro directly to the <span class="inline-code">TextMeshProUGUI</span> object (e.g., Game_Title) rather than its parent card.</td></tr>
-                <tr><td>Text labels appear blank in a fresh project</td><td>Pinwheel Compose</td><td>Run <span class="inline-code">Window → TextMeshPro → Import TMP Essential Resources</span>, then click Apply Theme to Scene.</td></tr>
+                <tr><td>Thread shows blue 'Other Scene' badge</td><td>Pinwheel Thread</td><td>Your active scene doesn't contain the loaded graph's UI. Switch back to your UI scene (references stay preserved), or click <strong>New</strong> for a separate graph.</td></tr>
+                <tr><td>Settings sliders/toggles don't remember values</td><td>Pinwheel Thread</td><td>Select <span class="inline-code">SettingsMenu_Screen</span> in Thread → check <strong>Auto-Remember Controls</strong> (teal PREFS pill) → click <strong>COMPILE &amp; CONNECT</strong>.</td></tr>
+                <tr><td>Japanese / Chinese / Russian shows □□□ boxes</td><td>Pinwheel Localization</td><td>Open Localization → <strong>Languages &amp; Fonts</strong> → assign a Noto Sans Dynamic TMP font, click <strong>Fix Font</strong> if warned, then click <strong>Sync Language Buttons</strong>.</td></tr>
+                <tr><td>Dark backdrop stays visible after switching menus</td><td>Pinwheel Thread</td><td>Select the Menu Target in Thread → click <strong>Snap to Screen Root</strong> → click <strong>COMPILE &amp; CONNECT</strong>.</td></tr>
+                <tr><td>Added a new button in Compose, missing in Thread</td><td>Compose + Thread</td><td>Select the blue Screen Buttons Card in Thread and click <strong>Refresh Child Buttons</strong>. Existing wires stay 100% intact.</td></tr>
+                <tr><td>Nested sub-panel stays open when reopening parent</td><td>Pinwheel Thread</td><td>Route opening the parent through a <strong>Refresh Panel (Gold)</strong> node, or check <strong>Start Disabled on Awake</strong> on the sub-panel node.</td></tr>
+                <tr><td>Buttons don't respond in Play Mode</td><td>Pinwheel Thread</td><td>Confirm <span class="inline-code">PinwheelThread_Router</span> is Active with zero <span class="inline-code">(None)</span> fields and an EventSystem exists in the scene.</td></tr>
+                <tr><td>Text labels appear blank in a fresh project</td><td>Pinwheel Compose</td><td>Run <span class="inline-code">Window → TextMeshPro → Import TMP Essential Resources</span>, then click <strong>Apply Theme</strong> in Compose.</td></tr>
               </tbody>
             </table>
           </div>
         </section>
 
         <!-- ================================================================
-             DOCUMENT 2 BANNER: UI PRODUCTION WORKFLOW
+             DOCUMENT 2 BANNER: UI PRODUCTION WORKFLOW (v1.6)
              ================================================================ -->
         <div id="suite-workflow" class="doc-group-banner" data-asset="suite">
           <div class="doc-group-meta">
-            <span class="tag tag-gold">Asset: Pinwheel Compose &amp; Pinwheel Thread (v1.1)</span>
+            <span class="tag tag-gold">Asset: Pinwheel Compose &amp; Pinwheel Thread (v1.6)</span>
             <span class="tag">Document 2 of 2 · Standard Operating Workflow</span>
           </div>
-          <h2>The 5-Stage UI Production Workflow</h2>
-          <p>Recommended production order for solo developers and co-op teams using Pinwheel Compose, Pinwheel Motion, and Pinwheel Thread together.</p>
+          <h2>The 6-Stage UI Production Workflow</h2>
+          <p>Recommended production order for solo speed and zero-conflict co-op teamwork using Pinwheel Compose, Motion, Localization, and Thread.</p>
         </div>
 
-        <!-- WORKFLOW: 5-STAGE PIPELINE -->
+        <!-- WORKFLOW: 6-STAGE PIPELINE -->
         <section id="wf-pipeline" class="docs-chapter" data-asset="suite">
           <div class="chapter-top-meta">
-            <span class="tag tag-gold">Applies to: Pinwheel Compose, Motion &amp; Thread</span>
+            <span class="tag tag-gold">Applies to: Compose, Motion, Localization &amp; Thread</span>
             <span class="tag">Workflow Guide</span>
           </div>
-          <h2>The 5-Stage Pipeline</h2>
+          <h2>The 6-Stage Golden Pipeline</h2>
           <div class="doc-table-wrap">
             <table class="doc-table">
-              <thead><tr><th>Stage</th><th>Asset / Tool Used</th><th>Goal</th><th>Output Artifact</th></tr></thead>
+              <thead><tr><th>Stage</th><th>Asset / Tool Used</th><th>Core Goal</th><th>Output Artifact</th></tr></thead>
               <tbody>
-                <tr><td>Stage 1: Art &amp; Theme Lock</td><td>Pinwheel Compose (PWUI_Theme)</td><td>Lock fonts, palette, 9-slice sprites &amp; watermark once.</td><td class="mono">Saved PWUI_Theme .asset</td></tr>
-                <tr><td>Stage 2: Screen Architecture</td><td>Pinwheel Compose</td><td>Build screens independently using Solo Preview &amp; Custom Slots.</td><td class="mono">PWUI_Screen hierarchy</td></tr>
-                <tr><td>Stage 3: Tactile Feel &amp; Juice</td><td>Pinwheel Motion</td><td>Layer Button Feel &amp; OnEnable Panel Intro onto finalized layouts.</td><td class="mono">Zero-GC procedural motion</td></tr>
-                <tr><td>Stage 4: Visual Flow Wiring</td><td>Pinwheel Thread</td><td>Wire Start Disabled, Switch Menu, Refresh Panel &amp; Escape/Back.</td><td class="mono">1 auto-bound C# Router</td></tr>
-                <tr><td>Stage 5: Gameplay Bridge</td><td>Pinwheel Thread (Custom Hooks)</td><td>Subscribe from gameplay / PurrNet scripts without editing generated code.</td><td class="mono">Decoupled C# events</td></tr>
+                <tr><td>Stage 1: Art &amp; Theme Lock</td><td>Pinwheel Compose (PWUI_Theme)</td><td>Lock fonts, Obsidian/Gold or custom palette, 9-slice sprites &amp; watermark once.</td><td class="mono">Saved PWUI_Theme .asset</td></tr>
+                <tr><td>Stage 2: Screen &amp; Block Architecture</td><td>Pinwheel Compose</td><td>Build screens, Nested Sub-Panels &amp; Canva-style Block Panels using Auto-Solo.</td><td class="mono">Clean PWUI_Screen tree</td></tr>
+                <tr><td>Stage 3: Tactile Feel &amp; Juice</td><td>Pinwheel Motion</td><td>Apply 1-click Recipes, Text FX &amp; smart Child Cascades with Edit-Mode Preview.</td><td class="mono">Zero-GC procedural motion</td></tr>
+                <tr><td>Stage 4: Multi-Language Pass</td><td>Pinwheel Localization</td><td>1-click Auto-Localize → Copy/Paste AI JSON → Anti-□□□ Font Check → Preview.</td><td class="mono">PWUI_LanguageTable .asset</td></tr>
+                <tr><td>Stage 5: Visual Flow &amp; Auto-Memory</td><td>Pinwheel Thread</td><td>Wire navigation, Start Disabled flags, Escape priority &amp; silent PlayerPrefs.</td><td class="mono">1 auto-bound C# Router</td></tr>
+                <tr><td>Stage 6: Gameplay Bridge</td><td>Pinwheel Thread (Custom Hooks)</td><td>Subscribe from gameplay / PurrNet scripts without editing generated code.</td><td class="mono">Zero-coupling C# events</td></tr>
               </tbody>
             </table>
           </div>
           <div class="callout">
-            <strong>Recommended Order</strong>
-            Lock Theme → Build Solo Screens → Add Motion Juice → Wire with Start Disabled &amp; Refresh Panel → Bridge via Custom Hooks.
+            <strong>Production Rule: Keep Settings Footer Clean (BACK + RESET)</strong>
+            Because Pinwheel Thread v1.6 automatically saves and restores Sliders, Toggles, and Dropdowns via PlayerPrefs, Settings menus default to <strong>BACK | RESET</strong> without a redundant APPLY button. Only add APPLY if you wire explicit graphics-mode confirmation to a Custom Hook.
+          </div>
+          <div class="callout">
+            <strong>The Pinwheel Studios v1.6 Mantra</strong>
+            Lock Theme → Compose Solo Screens &amp; Blocks → Add 1-Click Motion → 3-Step Auto-Localize → Wire Flows &amp; Auto-Prefs → Bridge via Custom Hooks.
           </div>
         </section>
 
-        <!-- WORKFLOW: PARALLEL TEAMWORK -->
+        <!-- WORKFLOW: PARALLEL TEAMWORK & SAFE ITERATION -->
         <section id="wf-team" class="docs-chapter" data-asset="suite">
           <div class="chapter-top-meta">
-            <span class="tag tag-gold">Applies to: Pinwheel Compose &amp; Pinwheel Thread</span>
+            <span class="tag tag-gold">Applies to: Compose, Localization &amp; Thread</span>
             <span class="tag">Team Workflow</span>
           </div>
-          <h2>Parallel Teamwork Across Separate Unity Projects</h2>
+          <h2>Cross-Project Teamwork &amp; Safe Editing Later</h2>
           <div class="doc-table-wrap">
             <table class="doc-table">
               <thead><tr><th>Role</th><th>Actions in Their Unity Project</th><th>Handoff Step</th></tr></thead>
               <tbody>
                 <tr>
                   <td>UI / Menu Creator<br /><span class="mono" style="font-size:0.72rem;color:var(--ink-dim);">Project A</span></td>
-                  <td>1. Builds &amp; edits screens in Pinwheel Compose.<br />2. Wires flows in Pinwheel Thread &amp; tests in Play Mode.</td>
-                  <td>Exports <span class="inline-code">.pwui</span> in Compose + <span class="inline-code">.pwthread</span> in Thread and sends via Discord.</td>
+                  <td>1. Builds &amp; themes screens/blocks in Compose.<br />2. Runs Localization &amp; adds Motion recipes.<br />3. Wires flows &amp; Auto-Prefs in Thread.</td>
+                  <td>Compose: <span class="inline-code">Transfer ▾ → Export/Copy .pwui</span><br />Thread: <span class="inline-code">Share ▾ → Export/Copy .pwthread</span><br />Localization: <span class="inline-code">CSV ▾ → Export CSV</span> (optional).</td>
                 </tr>
                 <tr>
                   <td>Gameplay / Network Dev<br /><span class="mono" style="font-size:0.72rem;color:var(--ink-dim);">Project B</span></td>
-                  <td>1. Opens active scene.<br />2. Imports UI in Compose (<span class="inline-code">Import Uses Active Theme = ON</span>).<br />3. Imports graph in Thread &amp; clicks COMPILE &amp; CONNECT.</td>
+                  <td>1. Opens their active scene.<br />2. Compose: <span class="inline-code">Transfer ▾ → Import/Paste .pwui</span>.<br />3. Thread: <span class="inline-code">Share ▾ → Import/Paste .pwthread</span> → COMPILE &amp; CONNECT.</td>
                   <td>Subscribes PurrNet / Gameplay scripts to Custom Hook C# events on <span class="inline-code">PinwheelThread_Router</span>.</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <h3>How to Iterate Safely Later</h3>
+          <ul>
+            <li><strong>Switching Scenes While Tools Are Docked:</strong> Compose refreshes automatically to the new scene's screens; Localization auto-restores any active Edit-Mode preview; Thread switches to a calm <strong>Other Scene</strong> badge and keeps your graph references intact.</li>
+            <li><strong>Renaming or Reparenting UI Objects:</strong> Rename freely—Thread's dual-key <span class="inline-code">GlobalObjectId</span> + Path tracker self-heals moved references automatically.</li>
+            <li><strong>Adding Buttons or Rows Later:</strong> Add/duplicate rows in Compose directly. If you add new clickable buttons to a wired screen, select its Screen Buttons Card in Thread and click <strong>Refresh Child Buttons</strong>—existing wires stay preserved.</li>
+          </ul>
         </section>
 
         <!-- WORKFLOW: RELEASE CHECKLIST -->
         <section id="wf-checklist" class="docs-chapter" data-asset="suite">
           <div class="chapter-top-meta">
-            <span class="tag tag-gold">Applies to: Pinwheel Compose, Motion &amp; Thread</span>
+            <span class="tag tag-gold">Applies to: Compose, Motion, Localization &amp; Thread</span>
             <span class="tag">Release Checklist</span>
           </div>
-          <h2>60-Second Release Checklist</h2>
+          <h2>60-Second Pre-Ship &amp; Package Export Checklist</h2>
           <div class="doc-table-wrap">
             <table class="doc-table">
               <thead><tr><th>Check</th><th>What to Verify</th><th>Why It Matters</th></tr></thead>
               <tbody>
-                <tr><td>1. Router Active</td><td><span class="inline-code">PinwheelThread_Router</span> is active in starting scene with zero <span class="inline-code">(None)</span> fields.</td><td>Ensures button listeners and Start Disabled rules run on boot.</td></tr>
-                <tr><td>2. Health Badge Green</td><td>Pinwheel Thread toolbar displays <strong>✓ Ready</strong> (0 errors).</td><td>Confirms no deleted objects or empty scene names remain.</td></tr>
-                <tr><td>3. Pause TimeScale Test</td><td>Test Pause Menu &amp; Settings at <span class="inline-code">Time.timeScale = 0</span>.</td><td>Confirms unscaledDeltaTime motion and clicks work while paused.</td></tr>
-                <tr><td>4. Aspect Ratio Sweep</td><td>Preview Game View in 16:9, 21:9 Ultrawide, and 16:10.</td><td>Confirms CanvasScaler keeps modal cards centered without clipping.</td></tr>
-                <tr><td>5. Clean Package Export</td><td>Uncheck 'Include dependencies' and exclude <span class="inline-code">Generated/</span> when exporting .unitypackages.</td><td>Keeps Compose &amp; Thread lightweight and project-agnostic.</td></tr>
+                <tr><td>1. Router &amp; Prefs Active</td><td><span class="inline-code">PinwheelThread_Router</span> is active in starting scene with zero <span class="inline-code">(None)</span> fields; test Clear Saved Prefs → Play → Re-Play.</td><td>Verifies button listeners, Start Disabled rules, and silent PlayerPrefs restore cleanly on boot.</td></tr>
+                <tr><td>2. Health Badge Green</td><td>Pinwheel Thread shows <strong>✓ Ready</strong> (0 errors) in your UI scene.</td><td>Guarantees no deleted targets or empty scene names remain.</td></tr>
+                <tr><td>3. Localization &amp; Fonts</td><td>Preview all 6 languages in Edit Mode; verify <span class="inline-code">PWUI_LanguageTable</span> sits in <span class="inline-code">Resources/PinwheelStudios/</span>.</td><td>Ensures builds auto-load the table and render zero □□□ boxes.</td></tr>
+                <tr><td>4. Pause TimeScale = 0</td><td>Open Pause Menu &amp; Settings while <span class="inline-code">Time.timeScale = 0</span>.</td><td>Confirms unscaledDeltaTime Motion, clicks, and Escape key work while paused.</td></tr>
+                <tr><td>5. Aspect Ratio Sweep</td><td>Check 16:9, 21:9 Ultrawide, and 16:10 in Game View.</td><td>Confirms CanvasScaler keeps cards and nested sub-panels centered without clipping.</td></tr>
+                <tr><td>6. Clean Package Export</td><td>Keep <span class="inline-code">Runtime/</span> free of Editor scripts, uncheck 'Include dependencies', and exclude <span class="inline-code">Generated/</span> when exporting .unitypackages.</td><td>Keeps Compose &amp; Thread lightweight, isolated, and warning-free.</td></tr>
               </tbody>
             </table>
           </div>
@@ -746,7 +795,7 @@ public class LobbyNetworkBridge : MonoBehaviour
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container footer-inner">
-        <div>© 2026 Pinwheel Studios · Official Documentation</div>
+        <div>© 2026 Pinwheel Studios · Official Documentation (v1.6)</div>
         <div class="footer-links">
           <a href="index.html">Home</a>
           <a href="https://github.com/Bhavishya222" target="_blank" rel="noopener noreferrer">GitHub</a>
