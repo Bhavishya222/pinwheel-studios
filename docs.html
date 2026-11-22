@@ -4,12 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Documentation — Pinwheel Studios Unity Tools</title>
-  <meta name="description" content="Official Unity documentation for Pinwheel Compose, Pinwheel Motion, Pinwheel Thread (v1.1), Unity MeshLOD Studio, and Unity URP World Rescaler by Pinwheel Studios." />
+  <meta name="description" content="Official Unity documentation for Pinwheel Compose, Pinwheel Motion, Pinwheel Thread (v1.1), Pinwheel DreamSky, Unity MeshLOD Studio, and Unity URP World Rescaler by Pinwheel Studios." />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    @media (min-width: 1021px) {
+      .asset-directory { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
 </head>
 <body>
   <img src="assets/pinwheel-mark.png" alt="" aria-hidden="true" class="bg-pinwheel" />
@@ -65,7 +70,16 @@
           </ul>
         </div>
 
-        <!-- ASSET 2: UNITY MESHLOD STUDIO -->
+        <!-- ASSET 2: PINWHEEL DREAMSKY -->
+        <div class="toc-asset-block">
+          <div class="toc-asset-title">Asset: Pinwheel DreamSky</div>
+          <div class="toc-group-label">Open-Source Guide</div>
+          <ul class="toc-list">
+            <li><a href="#dreamsky-docs"><span>Features, Tiers &amp; Setup</span><span class="toc-pill">MIT</span></a></li>
+          </ul>
+        </div>
+
+        <!-- ASSET 3: UNITY MESHLOD STUDIO -->
         <div class="toc-asset-block">
           <div class="toc-asset-title">Asset: Unity MeshLOD Studio</div>
           <div class="toc-group-label">Open-Source Guide</div>
@@ -74,7 +88,7 @@
           </ul>
         </div>
 
-        <!-- ASSET 3: UNITY URP WORLD RESCALER -->
+        <!-- ASSET 4: UNITY URP WORLD RESCALER -->
         <div class="toc-asset-block">
           <div class="toc-asset-title">Asset: Unity URP World Rescaler</div>
           <div class="toc-group-label">Open-Source Guide</div>
@@ -100,6 +114,11 @@
               <h3>Pinwheel Compose &amp; Thread</h3>
               <p>Includes <strong>Doc 1: Beginner's Tutorial</strong> (Compose, Motion, Thread) and <strong>Doc 2: 5-Stage UI Production Workflow</strong>.</p>
             </a>
+            <a href="#dreamsky-docs" class="asset-dir-card">
+              <span class="tag tag-blue" style="align-self:flex-start;">Open Source · MIT</span>
+              <h3>Pinwheel DreamSky</h3>
+              <p>Procedural night-sky shader suite, Quality Tiers, Retro mode, and Void/Water plane guide for Unity 6.3+ URP.</p>
+            </a>
             <a href="#meshlod-docs" class="asset-dir-card">
               <span class="tag tag-blue" style="align-self:flex-start;">Open Source · MIT</span>
               <h3>Unity MeshLOD Studio</h3>
@@ -116,6 +135,7 @@
           <div class="asset-filter-bar" role="group" aria-label="Filter Documentation by Asset">
             <button type="button" class="filter-btn active" data-filter="all">Show All Assets</button>
             <button type="button" class="filter-btn" data-filter="suite">Pinwheel Compose &amp; Thread</button>
+            <button type="button" class="filter-btn" data-filter="dreamsky">Pinwheel DreamSky</button>
             <button type="button" class="filter-btn" data-filter="meshlod">Unity MeshLOD Studio</button>
             <button type="button" class="filter-btn" data-filter="rescaler">Unity URP World Rescaler</button>
           </div>
@@ -523,7 +543,104 @@ public class LobbyNetworkBridge : MonoBehaviour
         </section>
 
         <!-- ================================================================
-             ASSET 2: UNITY MESHLOD STUDIO (OPEN SOURCE)
+             ASSET 2: PINWHEEL DREAMSKY (OPEN SOURCE)
+             ================================================================ -->
+        <div id="dreamsky-docs" class="doc-group-banner oss-banner" data-asset="dreamsky">
+          <div class="doc-group-meta">
+            <span class="tag tag-blue">Asset: Pinwheel DreamSky (Open Source)</span>
+            <span class="tag tag-green">MIT License</span>
+            <span class="tag">Unity 6.3+ · URP 17</span>
+          </div>
+          <h2>Pinwheel DreamSky — Procedural Night Sky Suite</h2>
+          <p>Lightweight procedural night-sky shader and workflow tool. Repository: <a href="https://github.com/Bhavishya222/Unity-URP-DreamSky" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright);text-decoration:underline;">github.com/Bhavishya222/Unity-URP-DreamSky</a></p>
+        </div>
+
+        <section id="dreamsky-guide" class="docs-chapter" data-asset="dreamsky">
+          <div class="chapter-top-meta">
+            <span class="tag tag-blue">Applies to: Pinwheel DreamSky</span>
+            <span class="tag">Quick-Start &amp; Reference</span>
+          </div>
+          <h2>Overview, Quality Tiers, Installation &amp; Usage</h2>
+          <p>
+            A procedural night-sky shader and workflow tool for Unity 6.3+ (URP 17), built for both stylized dark-fantasy worlds and realistic night scenes. Zero external dependencies, zero HDRP requirements, and strictly 3 shader variants (Low / Medium / High).
+          </p>
+
+          <h3>Key Features</h3>
+          <ul>
+            <li><strong>Spherical Dome Starfield:</strong> Zero-loop, zero-texture-tap star layers with organic galactic clustering, dark voids, adjustable star size and variation, independent twinkling, and hero star cross-flares.</li>
+            <li><strong>Domain-Warped Nebula:</strong> Pinch-free dome projection powered by a single packed RGBA noise atlas with 3-colour palettes, ridged filaments, and slow drift animation.</li>
+            <li><strong>Animated Multi-Layer Clouds:</strong> Perspective dome clouds with independent layer speeds and moon-driven backlit rim glow.</li>
+            <li><strong>Customizable Moon &amp; Distant Celestials:</strong> Local tangent-plane projection (scaling never distorts the sky), procedural moon phases, earthshine, halo glow, custom texture support, and an optional ringed planet.</li>
+            <li><strong>Procedural Shooting Stars:</strong> Time-sliced meteors driven purely on <span class="inline-code">_Time.y</span> with zero C# <span class="inline-code">Update()</span> loops.</li>
+            <li><strong>Lower Hemisphere &amp; World-Edge Blending:</strong> Switch below the horizon between Solid Gradient, Swirling Void Mist, or Fake Night Water (with synced moon shimmer), paired with an optional 1-draw-call Void &amp; Water Plane shader and 1-click URP Horizon Fog sync.</li>
+            <li><strong>Toggleable PS1/PS2 Retro Mode:</strong> World-locked spherical texel pixelation, perceptual 4×4 ordered Bayer dithering, and colour quantization.</li>
+            <li><strong>Built-In Editor Texture Baker:</strong> Generates a seamless 4-channel RGBA noise atlas (Perlin / Worley / Ridged / Warp) and procedural lunar crater texture in one click.</li>
+            <li><strong>Studio Setup Hub &amp; Custom Inspector:</strong> 9-section collapsible Material Inspector, 4 style presets (Dreamy Fantasy, Dark Gothic Retro, Realistic Night, Twilight Mist), and an optional zero-GC <span class="inline-code">PWSky_Controller</span> for Directional Light moon syncing and runtime preset crossfading.</li>
+          </ul>
+
+          <h3>Quality Tiers</h3>
+          <p>Switch tiers per material without changing your URP Pipeline Asset:</p>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead>
+                <tr><th>Tier</th><th>Star Layers</th><th>Nebula</th><th>Clouds</th><th>Moon &amp; Extras</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Low</td><td>1 clustered layer</td><td>1 tap (no warp)</td><td>1 layer</td><td>Analytic disc + glow</td></tr>
+                <tr><td>Medium</td><td>3 layers + hero stars</td><td>2 taps (warped)</td><td>2 layers</td><td>Textured moon + phases, 1 meteor slot</td></tr>
+                <tr><td>High</td><td>4 layers + dust + flares</td><td>3 taps (warped + filaments)</td><td>2 layers + fine erosion</td><td>Dual meteors + distant ringed planet</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Installation</h3>
+          <ul>
+            <li><strong>Option 1 — Unity Package (Recommended):</strong> Download <span class="inline-code">PinwheelDreamSky-v1.0.0.unitypackage</span> from the GitHub Releases page, then go to <span class="inline-code">Assets → Import Package → Custom Package...</span> in Unity 6.3+ (URP).</li>
+            <li><strong>Option 2 — Manual:</strong> Copy <span class="inline-code">Assets/PinwheelStudios/DreamSky/</span> into your project's <span class="inline-code">Assets/PinwheelStudios/</span> folder.</li>
+          </ul>
+
+          <h3>Quick Start</h3>
+          <ol>
+            <li>Open <span class="inline-code">Tools → Pinwheel Studios → Pinwheel DreamSky</span>.</li>
+            <li>Pick a Style Preset and Quality Tier, then click <strong>Create &amp; Apply Skybox to Scene</strong> (default textures bake automatically on first use into <span class="inline-code">Assets/PinwheelStudios/Generated/DreamSky/</span>).</li>
+            <li><em>(Optional)</em> Click <strong>Sync Scene Fog to Skybox Horizon Colour</strong> to hide distant terrain borders.</li>
+            <li><em>(Optional)</em> Click <strong>Spawn Synced Void / Water Plane</strong> to wrap mist or night water around cliff bases and floating islands.</li>
+            <li><em>(Optional)</em> Click <strong>Create / Select Sky Controller</strong> to sync the Skybox Moon to your scene's Directional Light.</li>
+          </ol>
+
+          <h3>Folder Structure</h3>
+          <div class="code-block">
+            <div class="code-head">
+              <span>Assets/PinwheelStudios/DreamSky/</span>
+            </div>
+            <pre>Assets/PinwheelStudios/DreamSky/
+├── Runtime/
+│   ├── PinwheelStudios.DreamSky.Runtime.asmdef
+│   ├── PWSky_Controller.cs
+│   └── PWSky_PresetEnums.cs
+├── Editor/
+│   ├── PinwheelStudios.DreamSky.Editor.asmdef
+│   ├── PWSky_EditorStyle.cs
+│   ├── PWSky_TextureBaker.cs
+│   ├── PWSky_ShaderGUI.cs
+│   └── PWSky_ToolWindow.cs
+└── Shaders/
+    ├── PWSky_DreamSkybox.shader
+    ├── PWSky_VoidWaterPlane.shader
+    └── Includes/
+        ├── PWSky_Common.hlsl
+        ├── PWSky_Stars.hlsl
+        ├── PWSky_Nebula.hlsl
+        ├── PWSky_Clouds.hlsl
+        ├── PWSky_Celestial.hlsl
+        ├── PWSky_ShootingStars.hlsl
+        ├── PWSky_LowerHemisphere.hlsl
+        └── PWSky_Retro.hlsl</pre>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             ASSET 3: UNITY MESHLOD STUDIO (OPEN SOURCE)
              ================================================================ -->
         <div id="meshlod-docs" class="doc-group-banner oss-banner" data-asset="meshlod">
           <div class="doc-group-meta">
@@ -569,7 +686,7 @@ public class LobbyNetworkBridge : MonoBehaviour
         </section>
 
         <!-- ================================================================
-             ASSET 3: UNITY URP WORLD RESCALER (OPEN SOURCE)
+             ASSET 4: UNITY URP WORLD RESCALER (OPEN SOURCE)
              ================================================================ -->
         <div id="rescaler-docs" class="doc-group-banner oss-banner" data-asset="rescaler">
           <div class="doc-group-meta">
